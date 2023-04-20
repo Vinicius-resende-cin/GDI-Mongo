@@ -1,0 +1,101 @@
+use Main
+
+db.obras.find({'Valor Vigente(R$)':{$gte:500000000}})
+
+db.obras.find({'Data Término': {$lt: new Date()}}).count()
+
+db.obras.aggregate([
+    {$match: {UF: 'PE'}},
+    {$project: {
+        Estado: '$UF',
+        BR: '$BR',
+        Inicio: '$Data Início',
+        Fim: '$Data Término',
+        Situação: '$Situação Obra'
+    }}
+])
+
+db.obras.aggregate([
+    { $match: {'Região':'Nordeste'}},
+    {$group: {
+        _id: null,
+        total:{$sum:'$Valor Vigente(R$)'}
+    }}
+])
+
+db.obras.aggregate([
+    { $match: {BR: 101}},
+    {$group: {
+        _id: null,
+        media:{$avg:'$Extensão(km)'}
+    }}
+])
+
+db.obras.aggregate([
+    {$group: {
+        _id: null,
+        maximo:{$max:'$Valor Vigente(R$)'}
+    }}
+])
+
+db.obras.createIndex( { Empresa: "text" } )
+
+db.obras.find({$text: {$search: 'CONSÓRCIO BR-101'}})
+
+db.obras.find({Supervisora: {$exists: true}}, {_id: 0, UF: 1, Empresa: 1, Supervisora: 1})
+
+db.obras.find({$where: "this.BR % 2 == 1"})
+
+db.obras.find({Empresa:{$regex:'CONSÓRCIO SANCHES'}}).sort('Valor Vigente(R$)')
+
+db.obras.find({}).pretty()
+
+db.obras.findOne({UF: 'SP'})
+
+db.obras.find({}, {_id: 0, UF: 1, BR: 1, Empresa: 1, 'Valor Vigente': 1}).sort('Valor Vigente(R$)').limit(10)
+
+db.obras.updateOne({'Extensão(km)': 1}, {$set:{'Extensão(km)': 1.2}})
+
+db.obras.save({
+    Região: "Nordeste",
+    UF: "PE",
+    BR: "232",
+    Empresa: "CONSÓRCIO BR-232/PE",
+    Objeto: "Trecho na BR-232",
+    "Data Início": new Date("2018-05-18"),
+    "Data Término": new Date("2020-06-20"),
+    "Extensão(km)": 1.02,
+    "Valor Vigente(R$)": 6674536.88,
+    "Situação Obra": "Serviços em execução. Previsão de conclusão até junho de 2020"
+})
+
+db.obras.aggregate([
+   {$addFields:
+        {message:
+            {$function:
+                {
+                    body: "this.Extensão / this.Valor Vigente(R$)",
+                    args: [],
+                    lang: "js"
+                }
+            }
+        }
+    }
+])
+
+db.obras.aggregate([
+    {$match: {BR:101}},
+    {$project:{
+            _id: 0,
+            BR:"$BR",
+            UF:"$UF",
+            Extensão: "$Extensão(km)",
+            "Estado":
+            {$cond:{
+                if:{$eq:["$UF",'PE']},
+                then:'Em Pernambuco',
+                else:'Fora de Pernambuco'
+            }}
+        }
+    }
+]).sort({"Extensão": 1})

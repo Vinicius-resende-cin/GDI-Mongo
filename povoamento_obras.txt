@@ -1,0 +1,1865 @@
+use Main
+
+db.obras.drop()
+
+db.obras.insertMany([
+  {
+    Região: "Norte",
+    UF: "AC",
+    BR: 317,
+    Empresa: "Estado do ACRE (AC)",
+    Objeto: "Contorno Rodoviário de Brasiléia",
+    "Data Início": new Date("2017-10-31"),
+    "Data Término": new Date("2021-10-31"),
+    "Extensão(km)": 10.1,
+    "Valor Vigente(R$)": 55920693.4,
+    "Situação Obra":
+      "Obras licitadas pelo DERACRE. Ordem de início assinada em 21/08/2020"
+  },
+  {
+    Região: "Nordeste",
+    UF: "AL",
+    BR: "104/316",
+    Empresa: "TC-20-916/2015",
+    Objeto: "Viaduto da PRF no entr. BR-104 com BR-316",
+    "Data Início": new Date("2016-01-04"),
+    "Data Término": new Date("2020-12-31"),
+    "Extensão(km)": 1.74,
+    "Valor Vigente(R$)": 77400000.0,
+    "Situação Obra": "Serviços em execução. Previsão de conclusão até dezembro de 2020"
+  },
+  {
+    Região: "Nordeste",
+    UF: "AL",
+    BR: 416,
+    Empresa: "CONSÓRCIO SVC/PAVISERVICE",
+    Objeto: "Conclusão das obras remanescentes de pavimentação",
+    "Data Início": new Date("2020-01-01"),
+    "Data Término": new Date("2022-4-1"),
+    Supervisora: "A licitar",
+    "Valor Vigente(R$)": 83491384.31,
+    "Situação Obra": "Em fase de mobilização"
+  },
+  {
+    Região: "Nordeste",
+    UF: "AL",
+    BR: 101,
+    Empresa: "CONSÓRCIO BR-101/AL",
+    Objeto: "Duplicação e restauração com melhoramentos",
+    "Data Início": new Date("2017-03-10"),
+    "Data Término": new Date("2021-1-31"),
+    Supervisora: "PROSUL - PROJETOS SUPER. PLANEJ. LTDA",
+    "Extensão(km)": 78.11,
+    "Valor Vigente(R$)": 518924405.2,
+    "Situação Obra":
+      "Executando serviços de terraplenagem, drenagem, pavimentação, sinalização e OAE. Concluídos 59 km de pavimentação"
+  },
+  {
+    Região: "Norte",
+    UF: "AP",
+    BR: 156,
+    Empresa: "CONSÓRCIO JEA BR-156/AP",
+    Objeto: "Pavimentação do lote 2 - Tronco Norte",
+    "Data Início": new Date("2017-06-30"),
+    "Data Término": new Date("2021-11-19"),
+    Supervisora: "MAIA MELO ENGENHARIA LTDA",
+    "Extensão(km)": 54.05,
+    "Valor Vigente(R$)": 164846633.4,
+    "Situação Obra":
+      "Projeto com os 42 km aprovados. Tem 5.91 km de terraplanagem concluído. Previsão de execução de 10 km."
+  },
+  {
+    Região: "Norte",
+    UF: "AP",
+    BR: 156,
+    Empresa: "CONSÓRCIO JEA BR-156/AP",
+    Objeto: "Pavimentação do lote 3 - Tronco Norte",
+    "Data Início": new Date("2017-06-30"),
+    "Data Término": new Date("2022-2-17"),
+    Supervisora: "MAIA MELO ENGENHARIA LTDA",
+    "Extensão(km)": 56,
+    "Valor Vigente(R$)": 155248007.7,
+    "Situação Obra":
+      "O contrato foi retomado para a elaboração dos projetos. Ainda existem pendências indígenas."
+  },
+  {
+    Região: "Norte",
+    UF: "AM",
+    BR: 319,
+    Empresa: "J. NASSER ENGENHARIA LTDA",
+    Objeto: "Construção da Ponte sobre o rio Atií",
+    "Data Início": new Date("2017-09-01"),
+    "Data Término": new Date("2020-10-20"),
+    Supervisora: "- CAVA ENGENHARIA DE INFRAESTRUTURA LTDA",
+    "Extensão(km)": 0.75,
+    "Valor Vigente(R$)": 4585872.38,
+    "Situação Obra": "Obra finalizada. Aguardando termo de recebimento."
+  },
+  {
+    Região: "Nordeste",
+    UF: "BA",
+    BR: 135,
+    Empresa: "CONSÓRCIO TOP / PAVISERVICE / SVC / GEOSISTEMAS",
+    Objeto: "Implantação BR-135/BA",
+    "Data Início": new Date("2015-03-03"),
+    "Data Término": new Date("2021-11-6"),
+    Supervisora: "DIEFRA ENGENHARIA E CONSULTORIA LTDA",
+    "Extensão(km)": 38,
+    "Valor Vigente(R$)": 136116190.5,
+    "Situação Obra":
+      "Contrato de RDCI dependendo da aprovação dos projetos executivos, obra para ser iniciada."
+  },
+  {
+    Região: "Nordeste",
+    UF: "BA",
+    BR: 135,
+    Empresa: "CONSÓRCIO CBV/EBRAE/GEOSISTEMAS",
+    Objeto: "Implantação e pavimentação",
+    "Data Início": new Date("2017-02-01"),
+    "Data Término": new Date("2021-6-9"),
+    Supervisora: "DIEFRA ENGENHARIA E CONSULTORIA LTDA",
+    "Extensão(km)": 75.43,
+    "Valor Vigente(R$)": 121618406.5,
+    "Situação Obra":
+      "Obra em andamento, sendo acrescidos 4.60 Km na travessia de Coribe e 3.73 Km na travessia de Ranchinho. Executados 69.68 Km de revestimento."
+  },
+  {
+    Região: "Nordeste",
+    UF: "BA",
+    BR: 135,
+    Empresa: "CONSÓRCIO TOP/GEOSISTEMAS",
+    Objeto: "Implantação BR-135/BA",
+    "Data Início": new Date("2014-08-21"),
+    "Data Término": new Date("2021-7-18"),
+    Supervisora: "DIEFRA ENGENHARIA E CONSULTORIA LTDA",
+    "Extensão(km)": 22.9,
+    "Valor Vigente(R$)": 91486458.3,
+    "Situação Obra":
+      "Obras paralisadas em 19/09/2018. tendo executado 22.41 Km de terraplanagem e 14.61 Km de revestimento."
+  },
+  {
+    Região: "Nordeste",
+    UF: "BA",
+    BR: 101,
+    Empresa: "CONSÓRCIO MOTA - EMPA - CONCRESOLO",
+    Objeto: "Duplicação BR-101/BA",
+    "Data Início": new Date("2014-10-08"),
+    "Data Término": new Date("2021-3-31"),
+    Supervisora: "DIEFRA ENGENHARIA E CONSULTORIA LTDA",
+    "Extensão(km)": 41.6,
+    "Valor Vigente(R$)": 241259166.1,
+    "Situação Obra":
+      "Obra em andamento, tendo 35.96 Km de terraplanagem e 31.71 Km de revestimento já executados."
+  },
+  {
+    Região: "Nordeste",
+    UF: "BA",
+    BR: 101,
+    Empresa: "CONSÓRCIO MOTA - EMPA - CONCRESOLO",
+    Objeto: "Duplicação BR-101/BA",
+    "Data Início": new Date("2014-10-08"),
+    "Data Término": new Date("2021-3-31"),
+    Supervisora: "DIEFRA ENGENHARIA E CONSULTORIA LTDA",
+    "Extensão(km)": 41.98,
+    "Valor Vigente(R$)": 290378301.3,
+    "Situação Obra":
+      "Obra em andamento, tendo 32.70 Km de terraplanagem e 27.18 Km de revestimento já executados."
+  },
+  {
+    Região: "Nordeste",
+    UF: "BA",
+    BR: 101,
+    Empresa: "CONSÓRCIO TORC ? VIA ? ENECON",
+    Objeto: "Duplicação BR-101/BA",
+    "Data Início": new Date("2014-10-23"),
+    "Data Término": new Date("2021-8-30"),
+    Supervisora: "DIEFRA ENGENHARIA E CONSULTORIA LTDA",
+    "Extensão(km)": 41.02,
+    "Valor Vigente(R$)": 253313400.9,
+    "Situação Obra":
+      "Contrato paralisado em 23/12/2018. tendo 10.62 km de terraplanagem executados."
+  },
+  {
+    Região: "Nordeste",
+    UF: "BA",
+    BR: 101,
+    Empresa: "CONSÓRCIO TORC ? VIA ? ENECON",
+    Objeto: "Duplicação BR-101/BA",
+    "Data Início": new Date("2014-10-22"),
+    "Data Término": new Date("2021-12-31"),
+    Supervisora: "DIEFRA ENGENHARIA E CONSULTORIA LTDA",
+    "Extensão(km)": 40.8,
+    "Valor Vigente(R$)": 243139838.2,
+    "Situação Obra":
+      "Atividades reiniciadas em 08/2020 Estão em execução a mobilização dos equipamentos, pessoal e manutenção do escritório e laboratório. 29.60 km de terraplanagem estão executados."
+  },
+  {
+    Região: "Nordeste",
+    UF: "BA",
+    BR: 116,
+    Empresa: "CONSÓRCIO HAP - PLANEX - CONVAP L5 BR 116/BA",
+    Objeto: "Duplicação BR-116/BA",
+    "Data Início": new Date("2014-11-05"),
+    "Data Término": new Date("2021-7-11"),
+    Supervisora: "ENECON S.A ENGENHEIROS E ECONOMISTAS CONSULTORES",
+    "Extensão(km)": 53.18,
+    "Valor Vigente(R$)": 350252406.2,
+    "Situação Obra":
+      "Contrato suspenso, estando todos os projetos executivos aprovados, tendo 14.00 Km de terraplanagem e 10.22 Km de base já executados."
+  },
+  {
+    Região: "Nordeste",
+    UF: "BA",
+    BR: 116,
+    Empresa: "CONSÓRCIO AMORIM BARRETO / EMPA / PATROL / BASITEC",
+    Objeto: "Duplicação BR-116/BA",
+    "Data Início": new Date("2014-11-05"),
+    "Data Término": new Date("2022-1-31"),
+    Supervisora: "ENECON S.A ENGENHEIROS E ECONOMISTAS CONSULTORES",
+    "Extensão(km)": 40.34,
+    "Valor Vigente(R$)": 357668743.7,
+    "Situação Obra":
+      "Obra em andamento, tendo 28.42 Km de terraplanagem e 14.92 km de duplicação já executados."
+  },
+  {
+    Região: "Nordeste",
+    UF: "BA",
+    BR: 235,
+    Empresa: "TOP ENGENHARIA LTDA",
+    Objeto: "Implantação BR-235/BA",
+    "Data Início": new Date("2014-03-03"),
+    "Data Término": new Date("2021-2-21"),
+    Supervisora: "ENGESUR-CONSULT. E EST. TECNICOS LTDA",
+    "Extensão(km)": 77.6,
+    "Valor Vigente(R$)": 169565352.1,
+    "Situação Obra":
+      "Obra em andamento, tendo 74.97 Km pavimentados. Previsão de concluir obra em 2020"
+  },
+  {
+    Região: "Nordeste",
+    UF: "BA",
+    BR: 235,
+    Empresa: "CONSÓRCIO BR-235",
+    Objeto: "Implantação e pavimentação",
+    "Data Início": new Date("2017-05-22"),
+    "Data Término": new Date("2021-7-7"),
+    Supervisora: "GEOSISTEMAS ENG. E PLANEJAMENTO LTDA.",
+    "Extensão(km)": 68,
+    "Valor Vigente(R$)": 84600000.0,
+    "Situação Obra":
+      "RDCi em fase de elaboração, análise e aceitação de projetos, sendo paralisado em 02/04/2018 sem nenhuma disciplina aprovada."
+  },
+  {
+    Região: "Nordeste",
+    UF: "BA",
+    BR: 235,
+    Empresa: "CONSÓRCIO BR-235",
+    Objeto: "Implantação e pavimentação",
+    "Data Início": new Date("2017-05-22"),
+    "Data Término": new Date("2021-3-8"),
+    Supervisora: "GEOSISTEMAS ENG. E PLANEJAMENTO LTDA.",
+    "Extensão(km)": 62.3,
+    "Valor Vigente(R$)": 95500000.0,
+    "Situação Obra": "RDCi em fase de elaboração, análise e aceitação de projetos."
+  },
+  {
+    Região: "Nordeste",
+    UF: "BA",
+    BR: 415,
+    Empresa: "Interveniência do DER/BA - BAHIA (BA)",
+    Objeto: "Ilhéus - Itabuna - Duplicação pela margem direita na BR-415",
+    "Data Início": new Date("2014-06-23"),
+    "Data Término": new Date("2020-12-31"),
+    Supervisora: "A licitar",
+    "Extensão(km)": 47.3,
+    "Valor Vigente(R$)": 118464334.7,
+    "Situação Obra":
+      "RDC integrado em fase de elaboração, análise e aceitação de projetos."
+  },
+  {
+    Região: "Nordeste",
+    UF: "CE",
+    BR: 222,
+    Empresa: "CONSÓRCIO VIA/TORC/MAIA MELO",
+    Objeto: "Duplicação do Acesso ao Porto de Pecém",
+    "Data Início": new Date("2015-12-02"),
+    "Data Término": new Date("2021-10-31"),
+    Supervisora: "R.N.R. - CONSULTORIA DE ENGENHARIA LTDA",
+    "Extensão(km)": 24.3,
+    "Valor Vigente(R$)": 182295886.9,
+    "Situação Obra":
+      "Estão sendo executados serviços na OAEs sobre os rios Cauípe, Tigre, sobre a Linha Férrea, drenagem, terraplenagem e revestimento."
+  },
+  {
+    Região: "Nordeste",
+    UF: "CE",
+    BR: 20,
+    Empresa:
+      "Estado do CEARÁ (CE) / Interveniência: SECRETARIA DE INFRAESTRUTURA DO ESTADO / Execução: DER/CE - ANEL VIÁRIO DE FORTALEZA",
+    Objeto: "ANEL VIARIO DE FORTALEZA",
+    "Data Início": new Date("2011-12-19"),
+    "Data Término": new Date("2020-12-31"),
+    "Extensão(km)": 32.1,
+    "Valor Vigente(R$)": 257224513.6,
+    "Situação Obra":
+      "A obra encontra-se em andamento, com serviços nos viadutos sobre a CE-040. CE-060 e BR-116"
+  },
+  {
+    Região: "Nordeste",
+    UF: "CE",
+    BR: "CE 155",
+    Empresa: "Governo do Estado do Ceará",
+    Objeto: "ACESSO AO PORTO DE PECÉM",
+    "Data Início": new Date("2014-07-04"),
+    "Data Término": new Date("2020-12-31"),
+    Supervisora: "",
+    "Extensão(km)": 20,
+    "Valor Vigente(R$)": 29016000.0,
+    "Situação Obra":
+      "O contrato foi rescindido. Conveniada busca nova empresa para continuidade das obras."
+  },
+  {
+    Região: "Sudeste",
+    UF: "ES",
+    BR: 482,
+    Empresa: "CONSÓRCIO VEREDA-HORIZONTE-ENECON",
+    Objeto: "Contorno Rodoviário de Cachoeiro de Itapemirim",
+    "Data Início": new Date("2017-03-15"),
+    "Data Término": new Date("2021-8-27"),
+    Supervisora: "STRATA ENGENHARIA LTDA",
+    "Extensão(km)": 5,
+    "Valor Vigente(R$)": 76006538.92,
+    "Situação Obra":
+      "Projetos não aprovados na DPP.  ORDEM DE PARALISAÇÃO dos Serviços a partir de 15/12/19"
+  },
+  {
+    Região: "Sudeste",
+    UF: "ES",
+    BR: 101,
+    Empresa: "CONSÓRCIO CONTRACTOR / SULCATARINENSE / ENECON",
+    Objeto: "Contorno Rodoviário do Município de Serra/ES (Mestre Álvaro)",
+    "Data Início": new Date("2017-07-24"),
+    "Data Término": new Date("2022-3-2"),
+    Supervisora: "PROSUL - PROJETOS SUPER. PLANEJ. LTDA",
+    "Extensão(km)": 19.7,
+    "Valor Vigente(R$)": 406910902.7,
+    "Situação Obra":
+      "Execução das OAE, sendo 3 Vias Elevadas e 2 Interseccões. Previsao de conclusao das obras em Dez/2021"
+  },
+  {
+    Região: "Sudeste",
+    UF: "ES",
+    BR: 447,
+    Empresa: "CONSÓRCIO CONTRACTOR - IGUATEMI",
+    Objeto: "Acesso Capuaba",
+    "Data Início": new Date("2015-07-01"),
+    "Data Término": new Date("2021-12-1"),
+    Supervisora: "PROSUL - PROJETOS SUPER. PLANEJ. LTDA.",
+    "Extensão(km)": 8.63,
+    "Valor Vigente(R$)": 179551076.1,
+    "Situação Obra":
+      "Obras em execução. Em andamento os processos de desapropriação que permitem a execução da obra até à estaca 90+0.00"
+  },
+  {
+    Região: "Centro Oeste",
+    UF: "GO",
+    BR: 80,
+    Empresa: "CONSÓRCIO VIA/LOCTEC/ENESCIL",
+    Objeto: "Ponte sobre rio Araguaia e acessos",
+    "Data Início": new Date("2016-01-11"),
+    "Data Término": new Date("2023-5-3"),
+    Supervisora: "ALTA ENGENHARIA DE CONSULTORIA LTDA",
+    "Extensão(km)": 4.1,
+    "Valor Vigente(R$)": 128378066.9,
+    "Situação Obra":
+      "Projeto executivo da ponte sobre o rio Araguaia finalizado. Em fase de elaboração os projetos de desapropriação e dos acessos."
+  },
+  {
+    Região: "Centro Oeste",
+    UF: "GO",
+    BR: 70,
+    Empresa: "CONSÓRCIO JUREMA / SOUZA REIS / GEOSISTEMAS",
+    Objeto: "Contorno de Aragarças",
+    "Data Início": new Date("2018-08-01"),
+    "Data Término": new Date("2021-3-31"),
+    Supervisora: "RTA ENGENHEIROS CONSULTORES LTDA",
+    "Extensão(km)": 6.3,
+    "Valor Vigente(R$)": 26502172.2,
+    "Situação Obra":
+      "1ª RPFO encaminhado em Setembro/2020 para analise. Pedências é a Licença da Cascalheira e Projeto do encabeçamento da ponte sobre o Rio Araguaia."
+  },
+  {
+    Região: "Centro Oeste",
+    UF: "GO",
+    BR: 60,
+    Empresa: "JM/IGUATEMI",
+    Objeto: "Remanescente do Contorno de Jataí",
+    "Data Início": new Date("2018-01-08"),
+    "Data Término": new Date("2021-10-27"),
+    Supervisora: "CONSÓRCIO DYNATEST / ETEL",
+    "Extensão(km)": 11.6,
+    "Valor Vigente(R$)": 50504805.99,
+    "Situação Obra":
+      "Possibilidade de Rescisao Contratual. Concluído Projetos Executivos. Solicitado Correções Ambientais no trecho."
+  },
+  {
+    Região: "Centro Oeste",
+    UF: "GO",
+    BR: 20,
+    Empresa: "CONSÓRCIO LOCTEC-CAVA-ALTA-SETORSUL",
+    Objeto: "Adequação-Rest./Melh. no perímetro urbano de Formosa",
+    "Data Início": new Date("2018-12-05"),
+    "Data Término": new Date("2021-2-21"),
+    Supervisora: "STRATA ENGENHARIA LTDA",
+    "Extensão(km)": 12,
+    "Valor Vigente(R$)": 86604486.97,
+    "Situação Obra": "Em atividades a execução das OAE - I-09. OAE - I 06 E e I 06 D."
+  },
+  {
+    Região: "Nordeste",
+    UF: "MA",
+    BR: 10,
+    Empresa: "EDECONSIL CONSTRUÇÕES E LOCAÇÕES LTDA",
+    Objeto: "Travessia Urbana de Imperatriz_x005F_x000D_",
+    "Data Início": new Date("2014-09-16"),
+    "Data Término": new Date("2021-3-23"),
+    Supervisora: "PROSUL - PROJETOS SUPER. PLANEJ. LTDA",
+    "Extensão(km)": 14.4,
+    "Valor Vigente(R$)": 274042849.6,
+    "Situação Obra": "Em execução serviços de terraplenagem e drenagem nas  marginais."
+  },
+  {
+    Região: "Nordeste",
+    UF: "MA",
+    BR: 135,
+    Empresa: "CONSÓRCIO EDECONSIL - AMORIM COUTINHO",
+    Objeto: "Duplicação da BR135/MA",
+    "Data Início": new Date("2017-06-09"),
+    "Data Término": new Date("2021-6-8"),
+    Supervisora: "MODELAGEM ENGENHARIA LTDA",
+    "Extensão(km)": 43.7,
+    "Valor Vigente(R$)": 114438867.2,
+    "Situação Obra": "Em execução serviços de terraplenagem e pavimentação."
+  },
+  {
+    Região: "Nordeste",
+    UF: "MA",
+    BR: 135,
+    Empresa: "HYTEC CONSTRUÇÕES, TERRAPLENAGEM, E INCORPORAÇÃO LTDA",
+    Objeto: "Duplicação da BR135/MA",
+    "Data Início": new Date("2017-01-06"),
+    "Data Término": new Date("2020-7-15"),
+    Supervisora: "GEOSISTEMAS ENG. E PLANEJAMENTO LTDA.",
+    "Extensão(km)": 32.3,
+    "Valor Vigente(R$)": 72207796.02,
+    "Situação Obra":
+      "Contrato concluido por decurso de prazo devido à solicitações de RPFO do TCU. Em levantamento de remanescentes."
+  },
+  {
+    Região: "Nordeste",
+    UF: "MA",
+    BR: 226,
+    Empresa: "HYTEC CONSTRUÇÕES, TERRAPLENAGEM, E INCORPORAÇÃO LTDA",
+    Objeto: "Contorno de Timon",
+    "Data Início": new Date("2017-01-05"),
+    "Data Término": new Date("2021-4-14"),
+    Supervisora: "JDS ENGENHARIA E CONSULTORIA LTDA",
+    "Extensão(km)": 111.5,
+    "Valor Vigente(R$)": 124384362.5,
+    "Situação Obra":
+      "Executados 23km de revestimento na BR-226 e 6km no Contorno. Em execução serviços revestimento e drenagem superficial."
+  },
+  {
+    Região: "Centro Oeste",
+    UF: "MT",
+    BR: 163,
+    Empresa: "CONSÓRCIO ENPA - METROPOLITANA ? CONTÉCNICA",
+    Objeto: "Obras de Duplicação e Restauração na BR-163_x005F_x000D_",
+    "Data Início": new Date("2013-07-05"),
+    "Data Término": new Date("2022-2-22"),
+    Supervisora: "DIREÇÃO CONSULTORIA E ENGENHARIA LTDA",
+    "Extensão(km)": 60.11,
+    "Valor Vigente(R$)": 370203408.1,
+    "Situação Obra":
+      "Executados 55.70 km de duplicação e 41.1 km de restauração. Em execução drenagem, duplicação, OAE e OAC. Foi entregue o contorno de São Pedro da Cipa"
+  },
+  {
+    Região: "Centro Oeste",
+    UF: "MT",
+    BR: 163,
+    Empresa: "CONSÓRCIO SANCHES - CONTÉCNICA",
+    Objeto: "Obras de Duplicação e Restauração na BR-163",
+    "Data Início": new Date("2014-04-01"),
+    "Data Término": new Date("2021-1-31"),
+    Supervisora: "PROSUL - PROJETOS SUPER. PLANEJ. LTDA",
+    "Extensão(km)": 71.6,
+    "Valor Vigente(R$)": 438162632.7,
+    "Situação Obra":
+      "A desapropriação do contorno de Jaciara encontra-se liberado. Aguardando a aprovação do RPFO para a retomada dos serviços."
+  },
+  {
+    Região: "Centro Oeste",
+    UF: "MT",
+    BR: 163,
+    Empresa: "CONSÓRCIO EQUIPAV - SANCHES TRIPOLONI",
+    Objeto: "Obras de Duplicação e Restauração na BR-163",
+    "Data Início": new Date("2014-04-01"),
+    "Data Término": new Date("2021-10-10"),
+    Supervisora: "ECOPLAN ENGENHARIA - LTDA",
+    "Extensão(km)": 42.4,
+    "Valor Vigente(R$)": 260511594.8,
+    "Situação Obra":
+      "Existem 38 km duplicados e 45.34 km restaurados. Em execução drenagem, restauração, duplicação, obras complementares e sinalização.  Posto da PRF inaugurado."
+  },
+  {
+    Região: "Centro Oeste",
+    UF: "MT",
+    BR: 242,
+    Empresa: "CONSÓRCIO BANDEIRANTES-DESTESA-ASTEC",
+    Objeto: "Implantação e pavimentação da BR-242/MT",
+    "Data Início": new Date("2016-06-03"),
+    "Data Término": new Date("2022-6-23"),
+    Supervisora: "PROSUL - PROJETOS SUPER. PLANEJ. LTDA",
+    "Extensão(km)": 103.38,
+    "Valor Vigente(R$)": 255856147.8,
+    "Situação Obra": "Contrato reiniciado. RDCi em fase de projeto. Pendência de LI."
+  },
+  {
+    Região: "Centro Oeste",
+    UF: "MT",
+    BR: 242,
+    Empresa: "CONSÓRCIO JM/ALTA/ETEC",
+    Objeto: "Implantação BR-242/MT",
+    "Data Início": new Date("2016-01-26"),
+    "Data Término": new Date("2023-12-24"),
+    "Extensão(km)": 90.96,
+    "Valor Vigente(R$)": 247507401.9,
+    "Situação Obra": "RDCi em fase de projeto. Pendência de LI."
+  },
+  {
+    Região: "Centro Oeste",
+    UF: "MT",
+    BR: 242,
+    Empresa: "CONSÓRCIO ENPA/CAVALCA/SAB/CONTÉCNICA",
+    Objeto: "Implantação BR-242/MT",
+    "Data Início": new Date("2016-01-11"),
+    "Data Término": new Date("2023-12-24"),
+    "Extensão(km)": 88.91,
+    "Valor Vigente(R$)": 187780000.0,
+    "Situação Obra":
+      "RDCi em fase de projeto. Assinado o contrato com a supervisora. Pendência de LI."
+  },
+  {
+    Região: "Centro Oeste",
+    UF: "MT",
+    BR: 242,
+    Empresa: "CONSÓRCIO BR-242/MT-ATRATIVA/CAMPESATTO/PROJECTA",
+    Objeto: "OAE's não contempladas em contratos anteriores",
+    "Data Início": new Date("2015-06-22"),
+    "Data Término": new Date("2020-10-16"),
+    "Extensão(km)": 205.57,
+    "Valor Vigente(R$)": 33131396.81,
+    "Situação Obra":
+      "Obra concluída no dia 03/07/2020 Tem 8 pontes entregues para o tráfego."
+  },
+  {
+    Região: "Centro Oeste",
+    UF: "MT",
+    BR: 174,
+    Empresa: "GOV. ESTADO MATO GROSSO - SINFRA",
+    Objeto: "Implantação e pavimentação da rodovia federal BR-174",
+    "Data Início": new Date("2013-06-24"),
+    "Data Término": new Date("2021-6-23"),
+    "Extensão(km)": 321.6,
+    "Valor Vigente(R$)": 684796850.0,
+    "Situação Obra":
+      "Os lotes 01. 02 e 03 entregaram os projetos para análise da SR. Lote 04 a licitar. Licença Ambiental pendente. Os Lotes 5 e 6 serão suprimidos do termo."
+  },
+  {
+    Região: "Centro Oeste",
+    UF: "MT",
+    BR: 70,
+    Empresa: "CONSTRUTORA SANCHES TRIPOLONI LTDA",
+    Objeto: "Contorno Rodoviário de Barra do Garças/MT",
+    "Data Início": new Date("2017-06-01"),
+    "Data Término": new Date("2022-1-5"),
+    Supervisora: "ENGEFOTO - ENGENHARIA E AEROLEVANTAMENTOS S.A",
+    "Extensão(km)": 9.9,
+    "Valor Vigente(R$)": 119632564.7,
+    "Situação Obra":
+      "Obra paralisada com 3.78 km de revestimento concluídos. Aguardando execução da drenagem para retomada da obra, prevista para 2021 e o término das obras."
+  },
+  {
+    Região: "Centro Oeste",
+    UF: "MS",
+    BR: "060/163/262",
+    Empresa: "",
+    Objeto: "Macro Anel de Campo Grande BR-262/060/163/MS",
+    "Data Início": new Date("2011-01-28"),
+    "Data Término": new Date("2020-12-31"),
+    Supervisora: "",
+    "Extensão(km)": 46.1,
+    "Valor Vigente(R$)": 46566914.31,
+    "Situação Obra":
+      "Obras praticamente finalizadas, pendente apenas sinalização e obras na intersecção com a BR-163/MS."
+  },
+  {
+    Região: "Centro Oeste",
+    UF: "MS",
+    BR: 419,
+    Empresa: "CONSÓRCIO PAVISERVICE/GEOSISTEMAS",
+    Objeto: "Implantação da BR-419/MS",
+    "Data Início": new Date("2017-09-11"),
+    "Data Término": new Date("2022-5-12"),
+    Supervisora: "PLANEJE PROJETOS ENGENHARIA E CONSTRUÇÃO LTDA - EPP",
+    "Extensão(km)": 52.5,
+    "Valor Vigente(R$)": 143897847.5,
+    "Situação Obra": "RDCi em fase final de projeto. Executados 29.20 km de pavimentação."
+  },
+  {
+    Região: "Centro Oeste",
+    UF: "MS",
+    BR: 419,
+    Empresa: "CONSÓRCIO PAVISERVICE/GEOSISTEMAS",
+    Objeto: "Implantação da BR-419/MS",
+    "Data Início": new Date("2019-01-07"),
+    "Data Término": new Date("2022-3-3"),
+    Supervisora: "",
+    "Extensão(km)": 54.7,
+    "Valor Vigente(R$)": 143242699.8,
+    "Situação Obra": "RDCi em fase de projeto. Pendências com a licitação da supervisora."
+  },
+  {
+    Região: "Sudeste",
+    UF: "MG",
+    BR: 365,
+    Empresa: "TRANSVIAS CONSTRUÇÕES E TERRAPLANAGENS LTDA",
+    Objeto: "Travessia Urbana de Uberlândia",
+    "Data Início": new Date("2016-07-01"),
+    "Data Término": new Date("2021-9-17"),
+    Supervisora: "STRATA ENGENHARIA LTDA",
+    "Extensão(km)": 16,
+    "Valor Vigente(R$)": 67426298.98,
+    "Situação Obra":
+      "Executando serviços na Trincheira do Taiaman e no Viaduto Francisco de Paulo Santos"
+  },
+  {
+    Região: "Sudeste",
+    UF: "MG",
+    BR: 381,
+    Empresa: "CONSÓRCIO BRASIL ? MOTA ? ENGESUR",
+    Objeto: "Duplicação da BR-381",
+    "Data Início": new Date("2016-08-17"),
+    "Data Término": new Date("2021-3-31"),
+    Supervisora: "MAIA MELO ENGENHARIA LTDA",
+    "Extensão(km)": 28.6,
+    "Valor Vigente(R$)": 423780657.5,
+    "Situação Obra":
+      "Executando serviços de terraplenagem, drenagem, pavimentação, sinalização e OAE. Concluídos 23 km de pavimentação"
+  },
+  {
+    Região: "Sudeste",
+    UF: "MG",
+    BR: 381,
+    Empresa: "CONSÓRCIO BRASIL ? MOTA ? ENGESUR",
+    Objeto: "Duplicação da BR-381",
+    "Data Início": new Date("2013-11-20"),
+    "Data Término": new Date("2021-3-31"),
+    Supervisora: "STRATA ENGENHARIA LTDA",
+    "Extensão(km)": 37.5,
+    "Valor Vigente(R$)": 690108041.7,
+    "Situação Obra":
+      "Executando serviços de terraplenagem, drenagem, pavimentação, sinalização e OAE. Concluídos 35 km de pavimentação"
+  },
+  {
+    Região: "Sudeste",
+    UF: "MG",
+    BR: 367,
+    Empresa: "VILASA CONSTRUTORA LTDA",
+    Objeto: "Implantação da BR-367",
+    "Data Início": new Date("2020-06-17"),
+    "Data Término": new Date("2022-12-3"),
+    Supervisora: "A licitar",
+    "Extensão(km)": 61.6,
+    "Valor Vigente(R$)": 157644840.1,
+    "Situação Obra": "Serviços em fase inicial de mobilização"
+  },
+  {
+    Região: "Sudeste",
+    UF: "MG",
+    BR: 262,
+    Empresa: "#N/D",
+    Objeto: "Travessia Urbana de Uberaba",
+    "Data Início": new Date("2009-09-01"),
+    "Data Término": new Date("2021-3-16"),
+    "Extensão(km)": 16.5,
+    "Valor Vigente(R$)": 70147896.76,
+    "Situação Obra":
+      "Em execução PI na BR-050 e Passarela próxima à Coopervale. Remanescente restante a ser contratado pela Prefeitura de Uberaba"
+  },
+  {
+    Região: "Sudeste",
+    UF: "MG",
+    BR: 440,
+    Empresa: "CONSÓRCIO EMPA - ENECON",
+    Objeto: "Travessia de Juiz de Fora",
+    "Data Início": new Date("2014-11-13"),
+    "Data Término": new Date("2021-3-31"),
+    Supervisora: "A LICITAR",
+    "Extensão(km)": 5,
+    "Valor Vigente(R$)": 61522860.35,
+    "Situação Obra": "Obras paralisadas"
+  },
+  {
+    Região: "Sudeste",
+    UF: "MG",
+    BR: 154,
+    Empresa: "VIA MAGNA INFRAESTRUTURA LTDA",
+    Objeto: "Implantação Ituiutaba - Crucilândia",
+    "Data Início": new Date("2018-09-18"),
+    "Data Término": new Date("2020-12-15"),
+    Supervisora: "Geosistemas",
+    "Extensão(km)": 50.8,
+    "Valor Vigente(R$)": 84007905.08,
+    "Situação Obra": "Pavimentação concluída."
+  },
+  {
+    Região: "Norte",
+    UF: "PA",
+    BR: 230,
+    Empresa: "CONSTRUTORA SANCHES TRIPOLONI LTDA",
+    Objeto: "Implantação da BR-230",
+    "Data Início": new Date("2012-08-09"),
+    "Data Término": new Date("2017-12-26"),
+    Supervisora: "MAIA MELO ENGENHARIA LTDA",
+    "Extensão(km)": 84.4,
+    "Valor Vigente(R$)": 112958202.0,
+    "Situação Obra":
+      "Obra paralisada, restam 2km para serem executados. Previsão de rescindir o contrato e contratar remanescentes."
+  },
+  {
+    Região: "Norte",
+    UF: "PA",
+    BR: 230,
+    Empresa: "CONSTRUTORA SANCHES TRIPOLONI LTDA",
+    Objeto: "Implantação da BR-230_x005F_x000D_",
+    "Data Início": new Date("2012-12-28"),
+    "Data Término": new Date("2015-6-16"),
+    Supervisora: "MAIA MELO ENGENHARIA LTDA",
+    "Extensão(km)": 83.1,
+    "Valor Vigente(R$)": 118850000.0,
+    "Situação Obra":
+      "Obra não iniciada, em andamento o levantamento de serviços para nova contratação."
+  },
+  {
+    Região: "Norte",
+    UF: "PA",
+    BR: 230,
+    Empresa: "CONSÓRCIO VEREDA-ENECON",
+    Objeto: "Execução de OAEs na BR-230 (12 Pontes)",
+    "Data Início": new Date("2017-01-20"),
+    "Data Término": new Date("2021-12-11"),
+    Supervisora: "",
+    "Extensão(km)": 0,
+    "Valor Vigente(R$)": 40592354.71,
+    "Situação Obra":
+      "Em execução de serviços nas OAEs sobre o Igarapé Jurupari, Kiri-kiri, sobre o Rio Curuatinga e Peruda."
+  },
+  {
+    Região: "Norte",
+    UF: "PA",
+    BR: 230,
+    Empresa: "CONSÓRCIO TAMASA - CIMCOP",
+    Objeto: "Implantação da BR-230",
+    "Data Início": new Date("2013-08-14"),
+    "Data Término": new Date("2021-1-23"),
+    Supervisora: "PROSUL - PROJETOS SUPER. PLANEJ. LTDA",
+    "Extensão(km)": 101.94,
+    "Valor Vigente(R$)": 227613595.4,
+    "Situação Obra":
+      "Serviços de pavimentação conluídos em setembro de 2020 Estão em execução os serviços de drenagem superficial."
+  },
+  {
+    Região: "Norte",
+    UF: "PA",
+    BR: 230,
+    Empresa: "CONSTRUTORA SANCHES TRIPOLONI LTDA",
+    Objeto: "Implantação da BR-230",
+    "Data Início": new Date("2010-07-05"),
+    "Data Término": new Date("2021-7-15"),
+    Supervisora: "ALTA ENGENHARIA DE INFRAESTRUTURA-LTDA",
+    "Extensão(km)": 105,
+    "Valor Vigente(R$)": 173517223.7,
+    "Situação Obra":
+      "O contrato encontra-se paralisado. Em definição sobre retomada das obras por parte da Contratada."
+  },
+  {
+    Região: "Norte",
+    UF: "PA",
+    BR: 230,
+    Empresa: "TORC - TERRAP. OBRAS RODOV. CONST. LTDA",
+    Objeto: "Implantação da BR-230",
+    "Data Início": new Date("2013-08-14"),
+    "Data Término": new Date("2016-3-30"),
+    Supervisora: "MAIA MELO ENGENHARIA LTDA",
+    "Extensão(km)": 105,
+    "Valor Vigente(R$)": 140888742.4,
+    "Situação Obra":
+      "O contrato foi paralisado em março/2016 Projeto das obras remanescentes em análise."
+  },
+  {
+    Região: "Norte",
+    UF: "PA",
+    BR: 230,
+    Empresa: "TORC - TERRAP. OBRAS RODOV. CONST. LTDA",
+    Objeto: "Implantação da BR-230",
+    "Data Início": new Date("2010-06-28"),
+    "Data Término": new Date("2016-12-31"),
+    Supervisora: "MAIA MELO ENGENHARIA LTDA",
+    "Extensão(km)": 150,
+    "Valor Vigente(R$)": 214187994.3,
+    "Situação Obra": "O contrato foi paralisado em março/2016"
+  },
+  {
+    Região: "Norte",
+    UF: "PA",
+    BR: 230,
+    Empresa: "CONSÓRCIO ARTELESTE/DELTACON",
+    Objeto: "Execução de OAEs na BR-230 (11 pontes)",
+    "Data Início": new Date("2017-02-10"),
+    "Data Término": new Date("2020-12-21"),
+    Supervisora: "ALTA ENGENHARIA DE INFRAESTRUTURA-LTDA",
+    "Extensão(km)": 0,
+    "Valor Vigente(R$)": 41671349.75,
+    "Situação Obra":
+      "Em execução dos serviços de encabeçamento na Ponte sobre o Igarapé Aparecida (Km 358.8)."
+  },
+  {
+    Região: "Norte",
+    UF: "PA",
+    BR: 230,
+    Empresa: "CONSÓRCIO ARTELESTE/DELTACON",
+    Objeto: "Execução de OAEs na BR-230 (12 pontes)",
+    "Data Início": new Date("2015-11-20"),
+    "Data Término": new Date("2021-1-3"),
+    "Extensão(km)": 0,
+    "Valor Vigente(R$)": 57306438.77,
+    "Situação Obra": "Em execução de serviços na OAE sobre o rio Seiko."
+  },
+  {
+    Região: "Norte",
+    UF: "PA",
+    BR: 230,
+    Empresa: "CONSÓRCIO ETHOS /HWB/CONSOL",
+    Objeto: "Implantação da BR-230",
+    "Data Início": new Date("2018-11-01"),
+    "Data Término": new Date("2021-1-4"),
+    Supervisora: "ALTA ENGENHARIA DE INFRAESTRUTURA-LTDA",
+    "Extensão(km)": 12,
+    "Valor Vigente(R$)": 21973577.16,
+    "Situação Obra":
+      "Foi concluida toda a pavimentação do contrato e este deve ser integralmente encerrrado em 2020"
+  },
+  {
+    Região: "Norte",
+    UF: "PA",
+    BR: 230,
+    Empresa: "CONSÓRCIO ARTELESTE/DELTACON",
+    Objeto: "Execução de OAEs na BR-230 (15 pontes)",
+    "Data Início": new Date("2020-01-03"),
+    "Data Término": new Date("2022-3-2"),
+    Supervisora: "",
+    "Extensão(km)": 95,
+    "Valor Vigente(R$)": 49730807.64,
+    "Situação Obra":
+      "Serão executados somente os projetos em 2020 Estudos Hidrológicos aprovados para oas OAEs sobre os igarapés Jaú, Jaú II, Valentim e Nova Descoberta. PB/PE da OAE sobre o igarapé Jaú I aprovado."
+  },
+  {
+    Região: "Norte",
+    UF: "PA",
+    BR: 163,
+    Empresa: "EXÉRCITO BRASILEIRO - 8º BEC",
+    Objeto: "Implantação da BR-163/PA",
+    "Data Início": new Date("2017-08-08"),
+    "Data Término": new Date("2021-2-24"),
+    Supervisora: "MAIA MELO ENGENHARIA LTDA",
+    "Extensão(km)": 65,
+    "Valor Vigente(R$)": 165965625.0,
+    "Situação Obra":
+      "Estão em execução os serviços de drenagem, sinalização e revestimento."
+  },
+  {
+    Região: "Norte",
+    UF: "PA",
+    BR: 163,
+    Empresa: "CONSÓRCIO SANCHES TRIPOLONI - BENITO ROGGIO E HIJOS - CONSOL",
+    Objeto: "Implantação da BR-163/PA",
+    "Data Início": new Date("2013-07-01"),
+    "Data Término": new Date("2021-4-6"),
+    Supervisora: "MAIA MELO ENGENHARIA LTDA",
+    "Extensão(km)": 112.67,
+    "Valor Vigente(R$)": 298781028.9,
+    "Situação Obra":
+      "A obra encontra-se em andamento com 90 km de terraplenagem e 70.47 km de pavimentação concluídos."
+  },
+  {
+    Região: "Norte",
+    UF: "PA",
+    BR: 163,
+    Empresa: "VEREDA ENGENHARIA LTDA",
+    Objeto: "Construção de 6 pontes nas BRs 163/230",
+    "Data Início": new Date("2018-01-29"),
+    "Data Término": new Date("2021-4-18"),
+    "Extensão(km)": 0,
+    "Valor Vigente(R$)": 16492065.14,
+    "Situação Obra":
+      "OAEs concluídas (2): Pontes sobre os igarapés Itapacurazinho, e Samurai. OAEs em execução (4): Pontes sobre os igarapés Açuí, Araguari, Preto, e Bueiro."
+  },
+  {
+    Região: "Norte",
+    UF: "PA",
+    BR: 308,
+    Empresa: "EDECONSIL CONSTRUÇÕES E LOCAÇÕES LTDA",
+    Objeto: "Implantação e pavimentação da BR 308",
+    "Data Início": new Date("2016-11-08"),
+    "Data Término": new Date("2021-7-18"),
+    Supervisora: "MAIA MELO ENGENHARIA LTDA",
+    "Extensão(km)": 36,
+    "Valor Vigente(R$)": 50222699.35,
+    "Situação Obra":
+      "Foram iniciados os serviços de sub-base e base na vila do Patal. A mobilização para retomada integral das obras continua."
+  },
+  {
+    Região: "Norte",
+    UF: "PA",
+    BR: 308,
+    Empresa: "EDECONSIL CONSTRUÇÕES E LOCAÇÕES LTDA",
+    Objeto: "Implantação e pavimentação da BR 308",
+    "Data Início": new Date("2016-11-08"),
+    "Data Término": new Date("2021-7-18"),
+    Supervisora: "MAIA MELO ENGENHARIA LTDA",
+    "Extensão(km)": 79.63,
+    "Valor Vigente(R$)": 137340227.7,
+    "Situação Obra":
+      "Foram reiniciadas as atividades de drenagem e pavimentação na Vila do Curupaiti. A empresa continua mobilizando equipamento e pessoal."
+  },
+  {
+    Região: "Norte",
+    UF: "PA",
+    BR: 316,
+    Empresa: "JM TERRAPLANAGEM CONSTRUÇÕES LTDA",
+    Objeto: "Duplicação da BR-316/PA",
+    "Data Início": new Date("2018-12-26"),
+    "Data Término": new Date("2021-12-18"),
+    Supervisora: "DIEFRA ENGENHARIA",
+    "Extensão(km)": 45,
+    "Valor Vigente(R$)": 115660563.2,
+    "Situação Obra":
+      "Os serviços foram retomados com a execução de limpeza, drenagem e terraplenagem."
+  },
+  {
+    Região: "Nordeste",
+    UF: "PB",
+    BR: 426,
+    Empresa: "ESSE ENG. SINAL. SERV. ESPECIAIS LTDA",
+    Objeto: "Remanescente de pavimentação da BR-426/PB",
+    "Data Início": new Date("2019-01-14"),
+    "Data Término": new Date("2021-5-7"),
+    Supervisora: "DIEFRA CONSULTORIA",
+    "Extensão(km)": 7.7,
+    "Valor Vigente(R$)": 9575546.93,
+    "Situação Obra": "Obras concluídas."
+  },
+  {
+    Região: "Nordeste",
+    UF: "PB",
+    BR: 230,
+    Empresa: "CONSORCIO CONSTRUCAP - COPASA",
+    Objeto: "Adequação de Capacidade da BR-230/PB",
+    "Data Início": new Date("2027-3-10"),
+    "Data Término": new Date("2020-2-22"),
+    Supervisora: "MAIA MELO ENGENHARIA LTDA",
+    "Extensão(km)": 28.1,
+    "Valor Vigente(R$)": 352193140.48,
+    "Situação Obra": "Contrato finalizado por decurso de prazo"
+  },
+  {
+    Região: "Nordeste",
+    UF: "PB",
+    BR: 230,
+    Empresa: "1º BATALHÃO DE ENGENHARIA DE CONSTRUÇÃO",
+    Objeto: "Remanescente das obras de adequação de capacidade e segurança",
+    "Data Início": new Date("2020-5-5"),
+    "Data Término": new Date("2022-5-5"),
+    Supervisora: "MAIA MELO ENGENHARIA LTDA",
+    "Extensão(km)": 8,
+    "Valor Vigente(R$)": 74658033.5,
+    "Situação Obra": "Em execução serviços de OAE e vias marginais"
+  },
+  {
+    Região: "Nordeste",
+    UF: "PB",
+    BR: 230,
+    Empresa: "CONSÓRCIO LCM/CCL/PRODEC BR 230/PB",
+    Objeto: "Adequação de capacidade",
+    "Data Início": new Date("2018-02-01"),
+    "Data Término": new Date("2021-9-12"),
+    Supervisora: "JBR ENGENHARIA LTDA",
+    "Extensão(km)": 31.6,
+    "Valor Vigente(R$)": 315392292.8,
+    "Situação Obra": "RDCi em fase de projetos. Restrição Orçamentária."
+  },
+  {
+    Região: "Sul",
+    UF: "PR",
+    BR: 163,
+    Empresa: "CONSÓRCIO SANCHES TRIPOLONI - MAIA MELO",
+    Objeto: "Duplicação da BR-163 - Cascavel - Marmelândia",
+    "Data Início": new Date("2014-10-01"),
+    "Data Término": new Date("2021-3-14"),
+    Supervisora: "PROSUL - PROJETOS SUPER. PLANEJ. LTDA",
+    "Extensão(km)": 74,
+    "Valor Vigente(R$)": 706313824.8,
+    "Situação Obra":
+      "Agilizar os processos de desapropriação para não impactar no desenvolvimento linear da obra."
+  },
+  {
+    Região: "Sul",
+    UF: "PR",
+    BR: 163,
+    Empresa: "CONSÓRCIO DALBA - CONCRESOLO",
+    Objeto: "Contorno Oeste de Cascavel - PR",
+    "Data Início": new Date("2016-09-15"),
+    "Data Término": new Date("2022-8-31"),
+    Supervisora: "PROSUL - PROJETOS SUPER. PLANEJ. LTDA",
+    "Extensão(km)": 19.07,
+    "Valor Vigente(R$)": 75962747.48,
+    "Situação Obra":
+      "Contrato reiniciado em 12/02/2020. estando na fase de elaboração, análise e aceitação de projetos."
+  },
+  {
+    Região: "Sul",
+    UF: "PR",
+    BR: 163,
+    Empresa: "CONSÓRCIO CASTILHO / TÉCNICA VIÁRIA / URBANIZA",
+    Objeto: "Duplicação da BR-163 - Toledo - Mar. Candido Rondon",
+    "Data Início": new Date("2014-10-07"),
+    "Data Término": new Date("2021-10-23"),
+    Supervisora: "PROSUL - PROJETOS SUPER. PLANEJ. LTDA",
+    "Extensão(km)": 38.9,
+    "Valor Vigente(R$)": 416145688.2,
+    "Situação Obra":
+      "Pavimentados 33 km nao contínuos. Necessidade de Remoçao dos Postes da concessionária de energia."
+  },
+  {
+    Região: "Sul",
+    UF: "PR",
+    BR: 487,
+    Empresa: "CONSÓRCIO CASTILHO - ENGEMIN",
+    Objeto: "Implantação da BR-487/PR",
+    "Data Início": new Date("2015-10-01"),
+    "Data Término": new Date("2021-9-17"),
+    Supervisora: "PROSUL - PROJETOS SUPER. PLANEJ. LTDA",
+    "Extensão(km)": 46.91,
+    "Valor Vigente(R$)": 232368311.4,
+    "Situação Obra":
+      "Atividades de  Manutenção do Canteiro de Obras, superestrutura das (interseção I-08 km 33+750) e (interseção I-09 Km 41+740), terraplenagem e drenagem."
+  },
+  {
+    Região: "Nordeste",
+    UF: "PE",
+    BR: 104,
+    Empresa: "Estado de PERNAMBUCO (PE)",
+    Objeto: "Rest. e adeq. de capacidade e dupl. da rodovia BR-104/PE",
+    "Data Início": new Date("2008-07-15"),
+    "Data Término": new Date("2020-12-31"),
+    "Extensão(km)": 51.4,
+    "Valor Vigente(R$)": 322226723.8,
+    "Situação Obra": "Obras paralisadas"
+  },
+  {
+    Região: "Nordeste",
+    UF: "PE",
+    BR: 101,
+    Empresa: "Estado de PERNAMBUCO (PE)",
+    Objeto: "CONTORNO DE RECIFE",
+    "Data Início": new Date("2012-12-27"),
+    "Data Término": new Date("2020-12-31"),
+    "Extensão(km)": 30.7,
+    "Valor Vigente(R$)": 162710505.8,
+    "Situação Obra":
+      "Executando serviços de pavimentação na Marginal da Av. Caxangá até a UFPE"
+  },
+  {
+    Região: "Nordeste",
+    UF: "PI",
+    BR: 235,
+    Empresa: "CONSÓRCIO SUCESSO - GETEL",
+    Objeto: "Dado de teste. Trecho referente a um convênio. Desconsiderar",
+    "Data Início": new Date("2009-06-24"),
+    "Data Término": new Date("2022-1-15"),
+    Supervisora: "JBR ENGENHARIA LTDA",
+    "Extensão(km)": 150.7,
+    "Valor Vigente(R$)": 0,
+    "Situação Obra":
+      "Obra em andamento, previsão de entrega 47.70 km em 2020 Caracol (Km 20.0) / Guaribas (Km 67.7)."
+  },
+  {
+    Região: "Nordeste",
+    UF: "PI",
+    BR: 235,
+    Empresa: "ARTELESTE",
+    Objeto: "Construção de OAE",
+    "Data Início": new Date("2019-06-17"),
+    "Data Término": new Date("2021-9-18"),
+    Supervisora: "Future ATP ZAGO",
+    "Extensão(km)": 0.18,
+    "Valor Vigente(R$)": 30259859.04,
+    "Situação Obra":
+      "OAE encontra-se com 100% da Infraestrutura concluída/ 93% da Mesoestrutura/ 98% da Superestrutura/ 44% do acabamento e 24% dos encabeçamentos executados. Previsão de concluir a ponte até 12/2020"
+  },
+  {
+    Região: "Nordeste",
+    UF: "PI",
+    BR: 343,
+    Empresa: "TCE ENGENHARIA LTDA",
+    Objeto: "Duplicação da BR-316/343 - Saídas Sul e Leste de Terezina",
+    "Data Início": new Date("2019-05-16"),
+    "Data Término": new Date("2021-3-31"),
+    Supervisora: "ATP ENGENHARIA LTDA",
+    "Extensão(km)": 7.6,
+    "Valor Vigente(R$)": 95148578.85,
+    "Situação Obra":
+      "Obra em andamento com previsão de entregar Viaduto do Mercado do Peixe (Interseção da BR-343/PI com a Av. dos Expedicionários) em 12/2020"
+  },
+  {
+    Região: "Nordeste",
+    UF: "PI",
+    BR: 316,
+    Empresa: "CONSTRUTORA HIDROS LTDA",
+    Objeto: "Duplicação do trecho entre Entr. com BR-226/PI e Demerval Lobão",
+    "Data Início": new Date("2020-01-07"),
+    "Data Término": new Date("2022-3-14"),
+    Supervisora: "",
+    "Valor Vigente(R$)": 73588189.13,
+    "Situação Obra":
+      "Contrato assinado em 26/12/2019 encontra-se em elaboração dos Projetos."
+  },
+  {
+    Região: "Sudeste",
+    UF: "RJ",
+    BR: 193,
+    Empresa: "CONSÓRCIO CTESA - SOBRENCO - CONCRESOLO",
+    Objeto: "Duplicação BR-493 - Manilha - Santa Guilhermina",
+    "Data Início": new Date("2014-01-08"),
+    "Data Término": new Date("2021-1-24"),
+    Supervisora: "DYNATEST ENGENHARIA LTDA",
+    "Extensão(km)": 25.25,
+    "Valor Vigente(R$)": 509563828.5,
+    "Situação Obra":
+      "Obras paralisadas. Restrição orçamentária e interferências no trecho. Estudos para retomada e/ou concessão."
+  },
+  {
+    Região: "Nordeste",
+    UF: "RN",
+    BR: 101,
+    Empresa: "CONSÓRCIO NATAL PARNAMIRIM",
+    Objeto: "Rest. e Melhoramento e OAE's na BR-101/RN",
+    "Data Início": new Date("2014-12-29"),
+    "Data Término": new Date("2021-10-28"),
+    Supervisora: "STRATA ENGENHARIA LTDA",
+    "Extensão(km)": 13.2,
+    "Valor Vigente(R$)": 182534657.5,
+    "Situação Obra":
+      "Obras concluídas em todos os Viadutos. Em execução de serviços de plantio de grama e construção de muro."
+  },
+  {
+    Região: "Nordeste",
+    UF: "RN",
+    BR: 406,
+    Empresa: "CONSTRUTORA A GASPAR S/A",
+    Objeto: "Adequação de capacidade, OAE BR-406/101/RN (Viaduto do Gancho)",
+    "Data Início": new Date("2016-06-01"),
+    "Data Término": new Date("2022-2-19"),
+    Supervisora: "ATP ENGENHARIA LTDA",
+    "Extensão(km)": 2.6,
+    "Valor Vigente(R$)": 39829048.27,
+    "Situação Obra":
+      "Estão em execução serviços de aplicação de binder, infraestrutura do Túnel e meso e superestrutura do viaduto."
+  },
+  {
+    Região: "Nordeste",
+    UF: "RN",
+    BR: 304,
+    Empresa: "IVAI ENGENHARIA DE OBRAS S/A",
+    Objeto: "Duplicação/Restauração na BR-304/RN- Reta tabajara e OAE's._x005F_x000D_",
+    "Data Início": new Date("2016-01-21"),
+    "Data Término": new Date("2022-3-13"),
+    Supervisora: "ATP ENGENHARIA LTDA",
+    "Extensão(km)": 27,
+    "Valor Vigente(R$)": 323522322.9,
+    "Situação Obra":
+      "Em execução de serviços de drenagem, OAC, sinalização, terraplenagem e revestimento."
+  },
+  {
+    Região: "Sul",
+    UF: "RS",
+    BR: 116,
+    Empresa: "CONSÓRCIO PONTE DO GUAÍBA",
+    Objeto: "2ª Ponte sobre o Rio Guaíba",
+    "Data Início": new Date("2014-04-16"),
+    "Data Término": new Date("2021-8-8"),
+    Supervisora: "ECOPLAN ENGENHARIA - LTDA",
+    "Extensão(km)": 15.3,
+    "Valor Vigente(R$)": 820173527.5,
+    "Situação Obra":
+      "Em 10/12/2020 foi realizado a inalguracao da nova ponte sobre o rio Guaíba  na linha Geral (eixo Norte Sul)."
+  },
+  {
+    Região: "Sul",
+    UF: "RS",
+    BR: 392,
+    Empresa: "CONSÓRCIO CONTORNO",
+    Objeto: "Contorno de Pelotas",
+    "Data Início": new Date("2012-07-03"),
+    "Data Término": new Date("2022-6-23"),
+    Supervisora: "ENECON S.A ENGENHEIROS E ECONOMISTAS CONSULTORES",
+    "Extensão(km)": 12.75,
+    "Valor Vigente(R$)": 351541440.0,
+    "Situação Obra":
+      "Concluido - 98% de terraplenagem, 79% de pavimentação, 87% das Obras de Artes Especiais."
+  },
+  {
+    Região: "Sul",
+    UF: "RS",
+    BR: 158,
+    Empresa: "CONSÓRCIO CONTINENTAL /SOGEL",
+    Objeto: "Travessia de Santa Maria",
+    "Data Início": new Date("2013-09-05"),
+    "Data Término": new Date("2022-2-2"),
+    Supervisora: "PROSUL - PROJETOS SUPER. PLANEJ. LTDA",
+    "Extensão(km)": 5.1,
+    "Valor Vigente(R$)": 184668122.8,
+    "Situação Obra":
+      "Executados serviços nos Viadutos Ramos 61-Uglione, restauração do Viaduto com BR-287/Rodoviária, Viadutos 1 e 2 de Ramo 66 e Trincheira do Ramo 59"
+  },
+  {
+    Região: "Sul",
+    UF: "RS",
+    BR: 287,
+    Empresa: "CONSÓRCIO TRAVESSIA (SULTEPA-PAVSOLO-ETEL)",
+    Objeto: "Travessia de Santa Maria",
+    "Data Início": new Date("2013-09-05"),
+    "Data Término": new Date("2022-2-2"),
+    Supervisora: "PROSUL - PROJETOS SUPER. PLANEJ. LTDA",
+    "Extensão(km)": 9.4,
+    "Valor Vigente(R$)": 223363826.6,
+    "Situação Obra":
+      "Executados Passagem Inferior R. Cap. Vasco da Cunha e Ponte sobre Arroio Cadena LD e serviços pavimentação nos segmentos 2 e 3"
+  },
+  {
+    Região: "Sul",
+    UF: "RS",
+    BR: 290,
+    Empresa: "CONSÓRCIO B C M",
+    Objeto: "Duplicação BR-290/RS",
+    "Data Início": new Date("2014-03-13"),
+    "Data Término": new Date("2022-8-1"),
+    Supervisora: "ECOPLAN ENGENHARIA - LTDA",
+    "Extensão(km)": 29.7,
+    "Valor Vigente(R$)": 168971402.7,
+    "Situação Obra":
+      "Não há atividades de execução da obra. O consórcio encontra-se desmobilizado."
+  },
+  {
+    Região: "Sul",
+    UF: "RS",
+    BR: 290,
+    Empresa: "CONSÓRCIO TB / ECB - ETEL",
+    Objeto: "Duplicação BR-290/RS",
+    "Data Início": new Date("2014-03-13"),
+    "Data Término": new Date("2020-11-11"),
+    Supervisora: "ECOPLAN ENGENHARIA - LTDA",
+    "Extensão(km)": 30.08,
+    "Valor Vigente(R$)": 212694280.3,
+    "Situação Obra":
+      "Não houve execução de serviços, empenho  esgotado, sem previsão de novos aportes orçamentários. Paralisado 31/07/2017"
+  },
+  {
+    Região: "Sul",
+    UF: "RS",
+    BR: 290,
+    Empresa: "CONSÓRCIO TRIER / CTESA - PRODEC",
+    Objeto: "Duplicação BR-290/RS",
+    "Data Início": new Date("2014-03-13"),
+    "Data Término": new Date("2021-8-17"),
+    Supervisora: "MAGNA ENGENHARIA LTDA",
+    "Extensão(km)": 27.03,
+    "Valor Vigente(R$)": 161613165.5,
+    "Situação Obra":
+      "Ao final do mês de agosto de 2018 foi dada ordem de paralisação ao Consórcio Construtor."
+  },
+  {
+    Região: "Sul",
+    UF: "RS",
+    BR: 290,
+    Empresa: "CONSÓRCIO EQUIPAV / CSL - ESTEIO",
+    Objeto: "Duplicação BR-290/RS",
+    "Data Início": new Date("2014-03-13"),
+    "Data Término": new Date("2021-9-1"),
+    Supervisora: "MAGNA ENGENHARIA LTDA",
+    "Extensão(km)": 28.7,
+    "Valor Vigente(R$)": 177458070.2,
+    "Situação Obra":
+      "Necessidade de aportes financeiro para continuidade das obras. Projeto complementar de travessia de fauna em analise."
+  },
+  {
+    Região: "Sul",
+    UF: "RS",
+    BR: 116,
+    Empresa: "1º BATALHÃO FERROVIÁRIO",
+    Objeto: "Duplicação  BR-116/RS (antigos contratos 00 00457/2012 e 00 00458/2012)",
+    "Data Início": new Date("2018-12-19"),
+    "Data Término": new Date("2022-5-31"),
+    Supervisora: "MAGNA ENGENHARIA LTDA",
+    "Extensão(km)": 50.8,
+    "Valor Vigente(R$)": 207475946.9,
+    "Situação Obra":
+      "Previsto liberar novo segmento de pista dupla 10 km, compreendido entre o km 320+500 e km 330+500. ainda em 2020. totalizando 15 km."
+  },
+  {
+    Região: "Sul",
+    UF: "RS",
+    BR: 116,
+    Empresa: "IVAI ENGENHARIA DE OBRAS S/A",
+    Objeto: "Duplicação BR-116/RS",
+    "Data Início": new Date("2012-07-16"),
+    "Data Término": new Date("2021-3-31"),
+    Supervisora: "INCORP/EPT - RODOVIAS",
+    "Extensão(km)": 21.88,
+    "Valor Vigente(R$)": 117346316.0,
+    "Situação Obra":
+      "Contrato Paralisado a partir de 21/09/2020. aguardando a conclusão dos procedimentos administrativos de RPFO"
+  },
+  {
+    Região: "Sul",
+    UF: "RS",
+    BR: 116,
+    Empresa: "CONSÓRCIO TRIER - CTESA",
+    Objeto: "Duplicação BR-116/RS",
+    "Data Início": new Date("2012-07-17"),
+    "Data Término": new Date("2021-2-26"),
+    Supervisora: "INCORP/EPT - RODOVIAS",
+    "Extensão(km)": 23.98,
+    "Valor Vigente(R$)": 153244944.2,
+    "Situação Obra": "Contrato encerrado"
+  },
+  {
+    Região: "Sul",
+    UF: "RS",
+    BR: 116,
+    Empresa: "TRIER ENGENHARIA S/A",
+    Objeto: "Obras remanescentes na BR-116",
+    "Data Início": new Date("2020-9-14"),
+    "Data Término": new Date("2022-3-8"),
+    Supervisora: "INCORP/EPT - RODOVIAS",
+    "Extensão(km)": 10.63,
+    "Valor Vigente(R$)": 16687817.53,
+    "Situação Obra":
+      "Ordem de Inicio em 15/09/2020. dos servicos remanescentes dos lotes 3 e 4 Finalidade de liberação de mais 4km duplicados ate Dez/2020"
+  },
+  {
+    Região: "Sul",
+    UF: "RS",
+    BR: 116,
+    Empresa: "CONSTRUTORA BRASÍLIA GUAIBA LTDA",
+    Objeto: "Duplicação BR-116/RS",
+    "Data Início": new Date("2012-07-19"),
+    "Data Término": new Date("2021-2-13"),
+    Supervisora: "STE SERVIÇOS TÉCNICOS DE ENGENHARIA S.A",
+    "Extensão(km)": 25.2,
+    "Valor Vigente(R$)": 170601786.4,
+    "Situação Obra": "Contrato Encerrado"
+  },
+  {
+    Região: "Sul",
+    UF: "RS",
+    BR: 116,
+    Empresa: "CONSTRUTORA PELOTENSE LTDA",
+    Objeto: "Duplicação BR-116/RS",
+    "Data Início": new Date("2012-07-16"),
+    "Data Término": new Date("2022-3-19"),
+    Supervisora: "STE SERVIÇOS TÉCNICOS DE ENGENHARIA S.A",
+    "Extensão(km)": 24.99,
+    "Valor Vigente(R$)": 148890627.3,
+    "Situação Obra":
+      "Obra encontra-se em rítimo normal, e o cronograma está sendo atendido."
+  },
+  {
+    Região: "Sul",
+    UF: "RS",
+    BR: 116,
+    Empresa: "SULTEPA CONSTRUÇÕES E COMERCIO LTDA",
+    Objeto: "Duplicação BR-116/RS",
+    "Data Início": new Date("2012-07-16"),
+    "Data Término": new Date("2022-3-25"),
+    Supervisora: "ENECON S.A ENGENHEIROS E ECONOMISTAS CONSULTORES",
+    "Extensão(km)": 21.6,
+    "Valor Vigente(R$)": 150437083.9,
+    "Situação Obra":
+      "- Desmatamento - 21.6 km/ Terraplenagem - 20.8 km/ Sub-base - 20.8 km/ Base - 20.4 km/ Revestimento - 18.8 km/ Drenagem OAC - 15.9 km"
+  },
+  {
+    Região: "Sul",
+    UF: "RS",
+    BR: 116,
+    Empresa: "SBS ENGENHARIA E CONSTRUCOES S/A",
+    Objeto: "Duplicação BR-116/RS",
+    "Data Início": new Date("2012-07-16"),
+    "Data Término": new Date("2021-6-19"),
+    Supervisora: "ENECON S.A ENGENHEIROS E ECONOMISTAS CONSULTORES",
+    "Extensão(km)": 18.9,
+    "Valor Vigente(R$)": 143121816.1,
+    "Situação Obra":
+      "- Desmatamento - 18.9 km/ Terraplenagem - 15.8 km/ Sub-base - 15.8 km/ Base - 15.3 km/ Revestimento - 11.0 km/ Obras de contenção - 0.6 km"
+  },
+  {
+    Região: "Sul",
+    UF: "RS",
+    BR: 116,
+    Empresa: "MAC ENGENHARIA LTDA",
+    Objeto: "Duplicação BR-116/RS",
+    "Data Início": new Date("2012-07-16"),
+    "Data Término": new Date("2021-4-3"),
+    Supervisora: "ENECON S.A ENGENHEIROS E ECONOMISTAS CONSULTORES",
+    "Extensão(km)": 22.76,
+    "Valor Vigente(R$)": 162440659.5,
+    "Situação Obra":
+      "Vigência contratual encerra em 030421 Terraplenagem - 21.0 km/ Revestimento - 20.7 km/"
+  },
+  {
+    Região: "Sul",
+    UF: "RS",
+    BR: 116,
+    Empresa: "CONSÓRCIO BR-116 NORTE (EPC MAC SOGEL IGUATEMI)",
+    Objeto: "Melhoramento físicos e segurança de tráfego",
+    "Data Início": new Date("2020-04-22"),
+    "Data Término": new Date("2022-11-15"),
+    Supervisora: "",
+    "Extensão(km)": 38.5,
+    "Valor Vigente(R$)": 506389191.7,
+    "Situação Obra":
+      "Ordem de Início: 22/4/2020 Previsão iniciar a ponte do Rio dos Sinos após a conclusão dos Projetos."
+  },
+  {
+    Região: "Norte",
+    UF: "RO",
+    BR: 364,
+    Empresa: "CONSÓRCIO ARTELESTE-ENESCIL",
+    Objeto: "RDCi - Ponte sobre o Rio Madeira em Abunã",
+    "Data Início": new Date("2013-12-13"),
+    "Data Término": new Date("2020-12-31"),
+    Supervisora: "CONSÓRCIO JDS - FALCÃO BAUER",
+    "Extensão(km)": 3.84,
+    "Valor Vigente(R$)": 154124825.9,
+    "Situação Obra":
+      "Produtividade prejudicada devido à restrição de insumos gerados pela pandemia. Em andamento execução do elevado, terraplenagem e OAC."
+  },
+  {
+    Região: "Norte",
+    UF: "RO",
+    BR: 429,
+    Empresa: "VEREDA ENGENHARIA LTDA",
+    Objeto: "Construção de pontes e bueiros celulares",
+    "Data Início": new Date("2013-09-18"),
+    "Data Término": new Date("2021-9-30"),
+    Supervisora: "CAVA ENGENHARIA DE INFRAESTRUTURA LTDA",
+    "Extensão(km)": 5.78,
+    "Valor Vigente(R$)": 57251284.86,
+    "Situação Obra":
+      "Pavimentação de encabeçamento das pontes praticamente concluídos. Paralisado em out/18.PAAR em andamento."
+  },
+  {
+    Região: "Norte",
+    UF: "RO",
+    BR: 364,
+    Empresa: "CONSÓRCIO MADECON / CONCRESOLO / CONSERVA",
+    Objeto: "Implant., Pav. e OAE's de ruas laterais e Melh. e Adeq. de Capacidade",
+    "Data Início": new Date("2014-09-15"),
+    "Data Término": new Date("2020-11-15"),
+    Supervisora: "CAVA ENGENHARIA DE INFRAESTRUTURA LTDA",
+    "Extensão(km)": 10.4,
+    "Valor Vigente(R$)": 94486531.71,
+    "Situação Obra": "Obras concluidas, em fase de recebimento."
+  },
+  {
+    Região: "Norte",
+    UF: "RR",
+    BR: 432,
+    Empresa: "CONSÓRCIO CAVALCA AGRIMAT CONSTEPRO",
+    Objeto: "Implantação/Pavimetação",
+    "Data Início": new Date("2016-03-11"),
+    "Data Término": new Date("2021-8-29"),
+    Supervisora: "CONSÓRCIO SPM (BUREAU)",
+    "Extensão(km)": 36.73,
+    "Valor Vigente(R$)": 107755332.8,
+    "Situação Obra":
+      "Obra em andamento, atualmente com 19.85 km de terraplenagem e 13.94 Km de revestimento concluídos."
+  },
+  {
+    Região: "Norte",
+    UF: "RR",
+    BR: 432,
+    Empresa: "CONSÓRCIO CASTILHO - COEMA - ALTA",
+    Objeto: "Implantação/Pavimetação",
+    "Data Início": new Date("2015-12-10"),
+    "Data Término": new Date("2020-10-8"),
+    Supervisora: "PROSUL - PROJETOS SUPER. PLANEJ. LTDA",
+    "Extensão(km)": 35.15,
+    "Valor Vigente(R$)": 87854489.13,
+    "Situação Obra": "Execução física concluída em dezembro/2018. aguardando finalização."
+  },
+  {
+    Região: "Norte",
+    UF: "RR",
+    BR: 432,
+    Empresa: "CONSÓRCIO CASTILHO - COEMA - ALTA",
+    Objeto: "Implantação/Pavimetação",
+    "Data Início": new Date("2015-12-10"),
+    "Data Término": new Date("2020-11-3"),
+    Supervisora: "PROSUL - PROJETOS SUPER. PLANEJ. LTDA",
+    "Extensão(km)": 43.8,
+    "Valor Vigente(R$)": 112817886.8,
+    "Situação Obra": "Execução física concluída em abril/2020. aguardando finalização."
+  },
+  {
+    Região: "Norte",
+    UF: "RR",
+    BR: 432,
+    Empresa: "EXÉRCITO BRASILEIRO - 6º BEC",
+    Objeto: "Implantação e pavimentação da BR-432/RR",
+    "Data Início": new Date("2017-10-16"),
+    "Data Término": new Date("2022-2-3"),
+    Supervisora: "PLANEJE PROJETOS ENGENHARIA E CONSTRUÇÃO LTDA EPP",
+    "Extensão(km)": 12.4,
+    "Valor Vigente(R$)": 12697099.49,
+    "Situação Obra":
+      "Obra iniciada em 18/01/2018. 5.86 km de terraplenagem concluídos e 4.62 km de pavimentação concluídos."
+  },
+  {
+    Região: "Sul",
+    UF: "SC",
+    BR: 280,
+    Empresa: "CONSTRUCAP-CCPS ENG. COMERCIO S/A",
+    Objeto: "Duplicação BR-280/SC",
+    "Data Início": new Date("2018-04-11"),
+    "Data Término": new Date("2022-1-29"),
+    Supervisora: "PROSUL - PROJETOS SUPER. PLANEJ. LTDA",
+    "Extensão(km)": 36,
+    "Valor Vigente(R$)": 368874925.1,
+    "Situação Obra":
+      "Serviços concentrados no Contorno de São Francisco do Sul e nas marginais próximas ao viaduto do IFC. Liberada a execução de serviços nas terras indígenas."
+  },
+  {
+    Região: "Sul",
+    UF: "SC",
+    BR: 280,
+    Empresa: "SULCATARINENSE-MIN/ART/CIM/BRI/CONS",
+    Objeto: "Duplicação BR-280/SC",
+    "Data Início": new Date("2014-03-17"),
+    "Data Término": new Date("2023-3-31"),
+    Supervisora: "SOTEPA SOC TECNICA ESTUDOS PROJ ASSE LTDA",
+    "Extensão(km)": 14.06,
+    "Valor Vigente(R$)": 172665721.3,
+    "Situação Obra":
+      "Executando serviços de terraplenagem, pavimentação e OAE. Liberada a execução de serviços nas terras indígenas."
+  },
+  {
+    Região: "Sul",
+    UF: "SC",
+    BR: 280,
+    Empresa: "CETENCO ENGENHARIA S/A",
+    Objeto: "Duplicação BR-280/SC",
+    "Data Início": new Date("2014-03-17"),
+    "Data Término": new Date("2023-3-31"),
+    Supervisora: "SOTEPA SOC TECNICA ESTUDOS PROJ ASSE LTDA",
+    "Extensão(km)": 23.84,
+    "Valor Vigente(R$)": 741716330.9,
+    "Situação Obra":
+      "Executando serviços de terraplenagem, pavimentação, OAE e revestimento nas paredes dos túneis."
+  },
+  {
+    Região: "Sul",
+    UF: "SC",
+    BR: 163,
+    Empresa: "TORC TERRAPLENAGEM OBRAS - RODOVIÁRIAS E CONSTRUÇÕES LTDA",
+    Objeto: "Ampliação de capacidade na BR-163/SC",
+    "Data Início": new Date("2019-08-06"),
+    "Data Término": new Date("2022-8-4"),
+    Supervisora: "",
+    "Extensão(km)": 58.5,
+    "Valor Vigente(R$)": 231105393.8,
+    "Situação Obra": "Obras não iniciadas. Projeto executivo em análise pelo DNIT."
+  },
+  {
+    Região: "Sul",
+    UF: "SC",
+    BR: 470,
+    Empresa: "CONSÓRCIO PLANATERRA-AZZA-SOGEL",
+    Objeto: "Duplicação BR-470/SC",
+    "Data Início": new Date("2014-03-17"),
+    "Data Término": new Date("2022-5-23"),
+    Supervisora: "PROSUL - PROJETOS SUPER. PLANEJ. LTDA",
+    "Extensão(km)": 18.61,
+    "Valor Vigente(R$)": 257014609.9,
+    "Situação Obra":
+      "Fase final da sinalização no acesso à cidade de Navegantes. Demais serviços concentrados entre os km 10 e km 16"
+  },
+  {
+    Região: "Sul",
+    UF: "SC",
+    BR: 470,
+    Empresa: "CONSÓRCIO IVAÍ - SETEP",
+    Objeto: "Duplicação BR-470/SC",
+    "Data Início": new Date("2014-06-13"),
+    "Data Término": new Date("2021-7-19"),
+    Supervisora: "PROSUL - PROJETOS SUPER. PLANEJ. LTDA",
+    "Extensão(km)": 26.26,
+    "Valor Vigente(R$)": 461187139.1,
+    "Situação Obra":
+      "Execução de terraplenagem, pavimentação e OAE. 19 km de duplicação liberados e 4 OAEs concluídas."
+  },
+  {
+    Região: "Sul",
+    UF: "SC",
+    BR: 470,
+    Empresa: "SULCATARINENSE-MIN/ART/CIM/BRI/CONS",
+    Objeto: "Duplicação BR-470/SC",
+    "Data Início": new Date("2013-07-30"),
+    "Data Término": new Date("2021-8-15"),
+    Supervisora: "IGUATEMI CONSULT. E SERVICOS ENG.LTDA",
+    "Extensão(km)": 12.91,
+    "Valor Vigente(R$)": 248508143.2,
+    "Situação Obra":
+      "Serviços concentrados no trevo de acesso à Pomerode. O Complexo da Mafisa foi entregue em agosto de 2020 Aguardando desapropriação de demais trechos."
+  },
+  {
+    Região: "Sul",
+    UF: "SC",
+    BR: 470,
+    Empresa: "SULCATARINENSE-MIN/ART/CIM/BRI/CONS",
+    Objeto: "Duplicação BR-470/SC",
+    "Data Início": new Date("2013-07-30"),
+    "Data Término": new Date("2021-11-5"),
+    Supervisora: "IGUATEMI CONSULT. E SERVICOS ENG.LTDA",
+    "Extensão(km)": 15.4,
+    "Valor Vigente(R$)": 302896607.3,
+    "Situação Obra":
+      "Executando serviços de restauração, pavimentação e OAE. Poucas frentes de serviço disponíveis por problemas com desapropriação."
+  },
+  {
+    Região: "Sul",
+    UF: "SC",
+    BR: 285,
+    Empresa: "CONSÓRCIO SETEP-IVAI-SOTEPA",
+    Objeto: "Implantação da BR-285/SC",
+    "Data Início": new Date("2013-11-29"),
+    "Data Término": new Date("2021-3-31"),
+    Supervisora: "IGUATEMI CONSULT. E SERVICOS ENG.LTDA",
+    "Extensão(km)": 22,
+    "Valor Vigente(R$)": 128614127.6,
+    "Situação Obra":
+      "Contorno de Timbé do Sul Concluído. Executando serviços de terraplenagem, pavimentação, drenagem e OAE no trecho da Serra da Rocinha."
+  },
+  {
+    Região: "Sul",
+    UF: "SC",
+    BR: 282,
+    Empresa: "BRITAGEM VOGELSANGER LTDA.",
+    Objeto: "Adequação da via expressa de Florianópolis",
+    "Data Início": new Date("2018-09-12"),
+    "Data Término": new Date("2021-3-3"),
+    "Extensão(km)": 5.6,
+    "Valor Vigente(R$)": 38733342.8,
+    "Situação Obra":
+      "Pavimentação concluída. Aguardando licitação para segunda etapa da obra."
+  },
+  {
+    Região: "Sul",
+    UF: "SC",
+    BR: "158/282",
+    Empresa: "CONSÓRCIO GTP",
+    Objeto: "Adeq. Entro. BR-480 a São Miguel do Oeste)",
+    "Data Início": new Date("2017-08-28"),
+    "Data Término": new Date("2022-6-11"),
+    "Extensão(km)": 164.3,
+    "Valor Vigente(R$)": 217356353.9,
+    "Situação Obra":
+      "Restauração ainda não foi iniciada. Projetos básico e executivo em análise pela SR/SC."
+  },
+  {
+    Região: "Sul",
+    UF: "SC",
+    BR: 101,
+    Empresa: "CONSÓRCIO SETEP - SOTEPA",
+    Objeto: "Duplicação da BR-101/SC",
+    "Data Início": new Date("2015-02-18"),
+    "Data Término": new Date("2020-5-24"),
+    Supervisora: "IGUATEMI CONSULT. E SERVICOS ENG.LTDA",
+    "Extensão(km)": 58.5,
+    "Valor Vigente(R$)": 48343234.03,
+    "Situação Obra": "Contrato concluído"
+  },
+  {
+    Região: "Sudeste",
+    UF: "SP",
+    BR: 101,
+    Empresa: "CONSÓRCIO FERREIRA GUEDES - TONIOLLO - BUSNELLO - ETC - PRODEC",
+    Objeto: "Travessia Urbana de Ubatuba",
+    "Data Início": new Date("2016-04-13"),
+    "Data Término": new Date("2021-10-16"),
+    Supervisora: "CONSÓRCIO DYNATEST-GEOSONDA-SD",
+    "Extensão(km)": 9.5,
+    "Valor Vigente(R$)": 519657023.5,
+    "Situação Obra":
+      "Contrato em fase de projetos. Não há disponibilidade orçamentária para início das obras"
+  },
+  {
+    Região: "Sudeste",
+    UF: "SP",
+    BR: 153,
+    Empresa: "CONSÓRCIO ENCALSO BANDEIRANTES COPLAN ASTEC",
+    Objeto: "Travessia Urbana de São José do Rio Preto",
+    "Data Início": new Date("2014-09-03"),
+    "Data Término": new Date("2021-12-14"),
+    Supervisora: "ETEL ESTUDOS TÉCNICOS LTDA",
+    "Extensão(km)": 17.8,
+    "Valor Vigente(R$)": 259718109.5,
+    "Situação Obra":
+      "Executando serviços de terraplenagem, drenagem, pavimentação, sinalização e OAE. Concluídos 16 km de pavimentação"
+  },
+  {
+    Região: "Sudeste",
+    UF: "SP",
+    BR: 381,
+    Empresa: "DERSA - DER/SP",
+    Objeto: "Rodoanel Metropolitano de São Paulo",
+    "Data Início": new Date("1999-04-30"),
+    "Data Término": new Date("2020-12-30"),
+    Supervisora: "CONSÓRCIO DYNATEST-PACS (GERENCIADORA)",
+    "Extensão(km)": 40,
+    "Valor Vigente(R$)": 3716467430.0,
+    "Situação Obra": "Serviços paralisados pelo DERSA/SP"
+  },
+  {
+    Região: "Nordeste",
+    UF: "SE",
+    BR: 101,
+    Empresa: "CONSÓRCIO NORDESTE BR-101 - LCM",
+    Objeto: "Restauração e duplicação da BR-101/SE lote 1",
+    "Data Início": new Date("2015-03-05"),
+    "Data Término": new Date("2021-10-31"),
+    Supervisora: "CONSOL ENGENHEIROS CONSULTORES LTDA",
+    "Extensão(km)": 40,
+    "Valor Vigente(R$)": 203850032.7,
+    "Situação Obra":
+      "25 km duplicados liberados ao tráfego. Em execução drenagem, pavimentação, sinalização e obras complementares."
+  },
+  {
+    Região: "Nordeste",
+    UF: "SE",
+    BR: 101,
+    Empresa: "CONSTRUTORA A GASPAR S/A",
+    Objeto: "Construção de OAEs",
+    "Data Início": new Date("2009-11-18"),
+    "Data Término": new Date("2021-5-31"),
+    Supervisora: "CONSOL ENGENHEIROS CONSULTORES LTDA",
+    "Extensão(km)": 40,
+    "Valor Vigente(R$)": 21876759.74,
+    "Situação Obra":
+      "2 Pontes e 2 Viadutos em fase final. Em execução obras para construção do Viaduto de acesso a Propriá"
+  },
+  {
+    Região: "Nordeste",
+    UF: "SE",
+    BR: 101,
+    Empresa: "CONSTRUTORA A GASPAR S/A",
+    Objeto:
+      "Execução de 10 pontes, 2 viadutos, restauração de 9 pontes, 3 passagens inferiores_x005F_x000D_",
+    "Data Início": new Date("2009-11-18"),
+    "Data Término": new Date("2020-12-7"),
+    Supervisora: "CONSOL ENGENHEIROS CONSULTORES LTDA",
+    "Extensão(km)": 37.3,
+    "Valor Vigente(R$)": 62442516.38,
+    "Situação Obra":
+      "Concluídas 7 OAEs, não iniciadas cinco. PI de acesso a Siriri concluída, pendente laje de transição. Contrato não prorrogado."
+  },
+  {
+    Região: "Nordeste",
+    UF: "SE",
+    BR: 101,
+    Empresa: "CONSÓRCIO BTEC - VILASA",
+    Objeto: "Adequação de capacidade. Inters. BR-101/SE com SE-245",
+    "Data Início": new Date("2014-12-25"),
+    "Data Término": new Date("2021-10-22"),
+    Supervisora: "PROJEL- ENGENHARIA ESPECIALIZADA LTDA",
+    "Extensão(km)": 1,
+    "Valor Vigente(R$)": 41331537.76,
+    "Situação Obra": "Obras paralisadas, devido às diversas interferências."
+  },
+  {
+    Região: "Nordeste",
+    UF: "SE",
+    BR: 101,
+    Empresa: "TORC",
+    Objeto: "Restauração e duplicação da BR-101/SE lote 22",
+    "Data Início": new Date("2019-07-09"),
+    "Data Término": new Date("2021-8-24"),
+    Supervisora: "CONSOL ENGENHEIROS CONSULTORES LTDA",
+    "Extensão(km)": 25.5,
+    "Valor Vigente(R$)": 135564752.9,
+    "Situação Obra":
+      "Liberados 5km duplicados. Obras em ritmo lento, executando terraplenagem e obras complementares."
+  },
+  {
+    Região: "Nordeste",
+    UF: "SE",
+    BR: 101,
+    Empresa: "CONSÓRCIO LCM/BTEC/LPC",
+    Objeto: "Encabeçamentos da ponte sobre o rio São Franscisco",
+    "Data Início": new Date("2018-11-23"),
+    "Data Término": new Date("2021-8-31"),
+    Supervisora: "IGUATEMI CONSULT. E SERVICOS ENG.LTDA",
+    "Extensão(km)": 1.58,
+    "Valor Vigente(R$)": 26074370.07,
+    "Situação Obra": "Obras de contenção do lado de Sergipe em fase final."
+  },
+  {
+    Região: "Norte",
+    UF: "TO",
+    BR: 153,
+    Empresa: "CONSÓRCIO A.GASPAR/ARTELESTE/V.GARAMBONE",
+    Objeto: "Ponte sobre o rio Araguaia",
+    "Data Início": new Date("2017-09-14"),
+    "Data Término": new Date("2023-9-22"),
+    Supervisora: "MAIA MELO ENGENHARIA LTDA",
+    "Extensão(km)": 1.73,
+    "Valor Vigente(R$)": 162302405.8,
+    "Situação Obra":
+      "RDCi em fase de projeto e obras com bom ritmo. Em execução infra e mesoestruturas do lado de Tocantins, com 11.8% executados."
+  },
+  {
+    Região: "Norte",
+    UF: "TO",
+    BR: 242,
+    Empresa: "CONSÓRCIO CSN ? CCM - GEOSERV",
+    Objeto: "RDC implant./Pavimentação",
+    "Data Início": new Date("2014-05-26"),
+    "Data Término": new Date("2021-12-31"),
+    Supervisora: "PLANEJE PROJETOS ENGENHARIA E CONSTRUÇÃO LTDA - EPP",
+    "Extensão(km)": 59.7,
+    "Valor Vigente(R$)": 89516179.81,
+    "Situação Obra":
+      "52km de revestimento executados. Obras paralisadas. Restrição ambiental que impede 8km de pavimentação."
+  }
+]);

@@ -1,0 +1,32 @@
+Use Main
+
+db.editais.find({Empresas: {$size: 2}})
+
+db.editais.updateOne(
+    {_id: ObjectId("6440868abf3e6847b288c710")},
+    {$addToSet: {Empresas: ['CONSÓRCIO CONTORNO']}}
+)
+
+db.editais.find({Empresas: {$all: ['ARTELESTE', 'CONSÓRCIO CONTORNO']}})
+
+db.editais.aggregate([
+    {$lookup:{
+        from: "obras",
+        localField: "Obra",
+        foreignField: "_id",
+        as: "ref_obra"
+    }},
+    {$limit: 1}
+])
+
+db.editais.aggregate([
+    {$project:{
+        _id:0,
+        Empresas: { 
+            $filter: { 
+                input: "$Empresas",
+                as: "empresas",
+                cond: { $ne: [ "$$empresas", "ARTELESTE"] } } } } }])
+
+db.editais.renameCollection("licitacoes")
+db.licitacoes.renameCollection("editais")
