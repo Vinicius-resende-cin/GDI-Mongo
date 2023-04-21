@@ -8,7 +8,7 @@ db.editais.insertMany([
         Finalidade: "Licitação",
         "Data Publicação": new Date('2012-04-23'),
         Validade: new Date('2012-10-23'),
-        Obra: ObjectId("6440868abf3e6847b288c70e"),
+        Obra: 80,
         Empresas: ['Estado de PERNAMBUCO (PE)', 'CONSÓRCIO VEREDA-ENECON']
     },
     {
@@ -16,7 +16,7 @@ db.editais.insertMany([
         Finalidade: "Licitação",
         "Data Publicação": new Date('2013-07-01'),
         Validade: new Date('2014-02-01'),
-        Obra: ObjectId("6440868abf3e6847b288c71c"),
+        Obra: 1,
         Empresas: ['ECOPLAN ENGENHARIA - LTDA']
     },
     {
@@ -24,7 +24,7 @@ db.editais.insertMany([
         Finalidade: "Licitação",
         "Data Publicação": new Date('2013-05-11'),
         Validade: new Date('2013-11-11'),
-        Obra: ObjectId("6440868abf3e6847b288c6e8"),
+        Obra: 20,
         Empresas: ['CONSÓRCIO VEREDA-ENECON', 'JM/IGUATEMI', 'GOV. ESTADO MATO GROSSO - SINFRA']
     },
     {
@@ -32,7 +32,7 @@ db.editais.insertMany([
         Finalidade: "Licitação",
         "Data Publicação": new Date('2015-03-30'),
         Validade: new Date('2015-09-30'),
-        Obra: ObjectId("6440868abf3e6847b288c6e7"),
+        Obra: 37,
         Empresas: ['ARTELESTE', 'CONSÓRCIO BR-242/MT-ATRATIVA/CAMPESATTO/PROJECTA']
     },
     {
@@ -40,7 +40,7 @@ db.editais.insertMany([
         Finalidade: "Licitação",
         "Data Publicação": new Date('2016-12-12'),
         Validade: new Date('2017-06-12'),
-        Obra: ObjectId("6440868abf3e6847b288c6e0"),
+        Obra: 4,
         Empresas: ['CONSÓRCIO CONTORNO', 'CONSTRUTORA PELOTENSE LTDA', 'ARTELESTE', 'HYTEC CONSTRUÇÕES, TERRAPLENAGEM, E INCORPORAÇÃO LTDA']
     },
     {
@@ -48,7 +48,7 @@ db.editais.insertMany([
         Finalidade: "Licitação",
         "Data Publicação": new Date('2017-02-07'),
         Validade: new Date('2017-08-07'),
-        Obra: ObjectId("6440868abf3e6847b288c6db"),
+        Obra: 135,
         Empresas: ['MAC ENGENHARIA LTDA', 'CONSÓRCIO B C M', 'JM/IGUATEMI']
     },
     {
@@ -56,7 +56,7 @@ db.editais.insertMany([
         Finalidade: "Licitação",
         "Data Publicação": new Date('2018-07-26'),
         Validade: new Date('2019-01-26'),
-        Obra: ObjectId("6440868abf3e6847b288c6dc"),
+        Obra: 116,
         Empresas: ['CONSÓRCIO VEREDA-ENECON', 'CONSÓRCIO LOCTEC-CAVA-ALTA-SETORSUL']
     },
     {
@@ -64,7 +64,7 @@ db.editais.insertMany([
         Finalidade: "Licitação",
         "Data Publicação": new Date('2019-01-07'),
         Validade: new Date('2019-07-07'),
-        Obra: ObjectId("6440868abf3e6847b288c6ec"),
+        Obra: 27,
         Empresas: ['JM TERRAPLANAGEM CONSTRUÇÕES LTDA', 'CONSÓRCIO SETEP - SOTEPA', 'CONSÓRCIO PAVISERVICE/GEOSISTEMAS']
     },
     {
@@ -72,7 +72,7 @@ db.editais.insertMany([
         Finalidade: "Licitação",
         "Data Publicação": new Date('2015-01-03'),
         Validade: new Date('2015-07-03'),
-        Obra: ObjectId("6440868abf3e6847b288c6d8"),
+        Obra: 86,
         Empresas: ['CONSTRUTORA A GASPAR S/A', 'CONSÓRCIO SETEP - SOTEPA', 'CONSÓRCIO CONTRACTOR - IGUATEMI']
     },
     {
@@ -80,7 +80,7 @@ db.editais.insertMany([
         Finalidade: "Licitação",
         "Data Publicação": new Date('2019-02-05'),
         Validade: new Date('2019-08-05'),
-        Obra: ObjectId("6440868abf3e6847b288c743"),
+        Obra: 93,
         Empresas: ['CONSÓRCIO BTEC - VILASA', 'TORC']
     },
     {
@@ -88,7 +88,7 @@ db.editais.insertMany([
         Finalidade: "Licitação",
         "Data Publicação": new Date('2018-11-17'),
         Validade: new Date('2019-05-17'),
-        Obra: ObjectId("6440868abf3e6847b288c705"),
+        Obra: 101,
         Empresas: ['CONSÓRCIO EMPA - ENECON', 'CONSÓRCIO NATAL PARNAMIRIM']
     },
     {
@@ -96,7 +96,7 @@ db.editais.insertMany([
         Finalidade: "Licitação",
         "Data Publicação": new Date('2019-04-12'),
         Validade: new Date('2019-04-12'),
-        Obra: ObjectId("6440868abf3e6847b288c710"),
+        Obra: 57,
         Empresas: ['CONSÓRCIO B C M', 'CONSÓRCIO GTP', 'CONSÓRCIO NATAL PARNAMIRIM', 'ARTELESTE']
     }
 ])

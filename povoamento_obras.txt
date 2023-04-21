@@ -4,6 +4,7 @@ db.obras.drop()
 
 db.obras.insertMany([
   {
+    contrato: 0,
     Região: "Norte",
     UF: "AC",
     BR: 317,
@@ -17,6 +18,7 @@ db.obras.insertMany([
       "Obras licitadas pelo DERACRE. Ordem de início assinada em 21/08/2020"
   },
   {
+    contrato: 1,
     Região: "Nordeste",
     UF: "AL",
     BR: "104/316",
@@ -29,6 +31,7 @@ db.obras.insertMany([
     "Situação Obra": "Serviços em execução. Previsão de conclusão até dezembro de 2020"
   },
   {
+    contrato: 2,
     Região: "Nordeste",
     UF: "AL",
     BR: 416,
@@ -41,6 +44,7 @@ db.obras.insertMany([
     "Situação Obra": "Em fase de mobilização"
   },
   {
+    contrato: 3,
     Região: "Nordeste",
     UF: "AL",
     BR: 101,
@@ -55,6 +59,7 @@ db.obras.insertMany([
       "Executando serviços de terraplenagem, drenagem, pavimentação, sinalização e OAE. Concluídos 59 km de pavimentação"
   },
   {
+    contrato: 4,
     Região: "Norte",
     UF: "AP",
     BR: 156,
@@ -69,6 +74,7 @@ db.obras.insertMany([
       "Projeto com os 42 km aprovados. Tem 5.91 km de terraplanagem concluído. Previsão de execução de 10 km."
   },
   {
+    contrato: 5,
     Região: "Norte",
     UF: "AP",
     BR: 156,
@@ -83,6 +89,7 @@ db.obras.insertMany([
       "O contrato foi retomado para a elaboração dos projetos. Ainda existem pendências indígenas."
   },
   {
+    contrato: 6,
     Região: "Norte",
     UF: "AM",
     BR: 319,
@@ -96,6 +103,7 @@ db.obras.insertMany([
     "Situação Obra": "Obra finalizada. Aguardando termo de recebimento."
   },
   {
+    contrato: 7,
     Região: "Nordeste",
     UF: "BA",
     BR: 135,
@@ -110,6 +118,7 @@ db.obras.insertMany([
       "Contrato de RDCI dependendo da aprovação dos projetos executivos, obra para ser iniciada."
   },
   {
+    contrato: 8,
     Região: "Nordeste",
     UF: "BA",
     BR: 135,
@@ -124,6 +133,7 @@ db.obras.insertMany([
       "Obra em andamento, sendo acrescidos 4.60 Km na travessia de Coribe e 3.73 Km na travessia de Ranchinho. Executados 69.68 Km de revestimento."
   },
   {
+    contrato: 9,
     Região: "Nordeste",
     UF: "BA",
     BR: 135,
@@ -138,6 +148,7 @@ db.obras.insertMany([
       "Obras paralisadas em 19/09/2018. tendo executado 22.41 Km de terraplanagem e 14.61 Km de revestimento."
   },
   {
+    contrato: 10,
     Região: "Nordeste",
     UF: "BA",
     BR: 101,
@@ -152,6 +163,7 @@ db.obras.insertMany([
       "Obra em andamento, tendo 35.96 Km de terraplanagem e 31.71 Km de revestimento já executados."
   },
   {
+    contrato: 11,
     Região: "Nordeste",
     UF: "BA",
     BR: 101,
@@ -166,6 +178,7 @@ db.obras.insertMany([
       "Obra em andamento, tendo 32.70 Km de terraplanagem e 27.18 Km de revestimento já executados."
   },
   {
+    contrato: 12,
     Região: "Nordeste",
     UF: "BA",
     BR: 101,
@@ -180,6 +193,7 @@ db.obras.insertMany([
       "Contrato paralisado em 23/12/2018. tendo 10.62 km de terraplanagem executados."
   },
   {
+    contrato: 13,
     Região: "Nordeste",
     UF: "BA",
     BR: 101,
@@ -194,6 +208,7 @@ db.obras.insertMany([
       "Atividades reiniciadas em 08/2020 Estão em execução a mobilização dos equipamentos, pessoal e manutenção do escritório e laboratório. 29.60 km de terraplanagem estão executados."
   },
   {
+    contrato: 14,
     Região: "Nordeste",
     UF: "BA",
     BR: 116,
@@ -208,6 +223,7 @@ db.obras.insertMany([
       "Contrato suspenso, estando todos os projetos executivos aprovados, tendo 14.00 Km de terraplanagem e 10.22 Km de base já executados."
   },
   {
+    contrato: 15,
     Região: "Nordeste",
     UF: "BA",
     BR: 116,
@@ -222,6 +238,7 @@ db.obras.insertMany([
       "Obra em andamento, tendo 28.42 Km de terraplanagem e 14.92 km de duplicação já executados."
   },
   {
+    contrato: 16,
     Região: "Nordeste",
     UF: "BA",
     BR: 235,
@@ -236,6 +253,7 @@ db.obras.insertMany([
       "Obra em andamento, tendo 74.97 Km pavimentados. Previsão de concluir obra em 2020"
   },
   {
+    contrato: 17,
     Região: "Nordeste",
     UF: "BA",
     BR: 235,
@@ -250,6 +268,7 @@ db.obras.insertMany([
       "RDCi em fase de elaboração, análise e aceitação de projetos, sendo paralisado em 02/04/2018 sem nenhuma disciplina aprovada."
   },
   {
+    contrato: 18,
     Região: "Nordeste",
     UF: "BA",
     BR: 235,
@@ -263,6 +282,7 @@ db.obras.insertMany([
     "Situação Obra": "RDCi em fase de elaboração, análise e aceitação de projetos."
   },
   {
+    contrato: 19,
     Região: "Nordeste",
     UF: "BA",
     BR: 415,
@@ -277,6 +297,7 @@ db.obras.insertMany([
       "RDC integrado em fase de elaboração, análise e aceitação de projetos."
   },
   {
+    contrato: 20,
     Região: "Nordeste",
     UF: "CE",
     BR: 222,
@@ -291,6 +312,7 @@ db.obras.insertMany([
       "Estão sendo executados serviços na OAEs sobre os rios Cauípe, Tigre, sobre a Linha Férrea, drenagem, terraplenagem e revestimento."
   },
   {
+    contrato: 21,
     Região: "Nordeste",
     UF: "CE",
     BR: 20,
@@ -305,6 +327,7 @@ db.obras.insertMany([
       "A obra encontra-se em andamento, com serviços nos viadutos sobre a CE-040. CE-060 e BR-116"
   },
   {
+    contrato: 22,
     Região: "Nordeste",
     UF: "CE",
     BR: "CE 155",
@@ -319,6 +342,7 @@ db.obras.insertMany([
       "O contrato foi rescindido. Conveniada busca nova empresa para continuidade das obras."
   },
   {
+    contrato: 23,
     Região: "Sudeste",
     UF: "ES",
     BR: 482,
@@ -333,6 +357,7 @@ db.obras.insertMany([
       "Projetos não aprovados na DPP.  ORDEM DE PARALISAÇÃO dos Serviços a partir de 15/12/19"
   },
   {
+    contrato: 24,
     Região: "Sudeste",
     UF: "ES",
     BR: 101,
@@ -347,6 +372,7 @@ db.obras.insertMany([
       "Execução das OAE, sendo 3 Vias Elevadas e 2 Interseccões. Previsao de conclusao das obras em Dez/2021"
   },
   {
+    contrato: 25,
     Região: "Sudeste",
     UF: "ES",
     BR: 447,
@@ -361,6 +387,7 @@ db.obras.insertMany([
       "Obras em execução. Em andamento os processos de desapropriação que permitem a execução da obra até à estaca 90+0.00"
   },
   {
+    contrato: 26,
     Região: "Centro Oeste",
     UF: "GO",
     BR: 80,
@@ -375,6 +402,7 @@ db.obras.insertMany([
       "Projeto executivo da ponte sobre o rio Araguaia finalizado. Em fase de elaboração os projetos de desapropriação e dos acessos."
   },
   {
+    contrato: 27,
     Região: "Centro Oeste",
     UF: "GO",
     BR: 70,
@@ -389,6 +417,7 @@ db.obras.insertMany([
       "1ª RPFO encaminhado em Setembro/2020 para analise. Pedências é a Licença da Cascalheira e Projeto do encabeçamento da ponte sobre o Rio Araguaia."
   },
   {
+    contrato: 28,
     Região: "Centro Oeste",
     UF: "GO",
     BR: 60,
@@ -403,6 +432,7 @@ db.obras.insertMany([
       "Possibilidade de Rescisao Contratual. Concluído Projetos Executivos. Solicitado Correções Ambientais no trecho."
   },
   {
+    contrato: 29,
     Região: "Centro Oeste",
     UF: "GO",
     BR: 20,
@@ -416,6 +446,7 @@ db.obras.insertMany([
     "Situação Obra": "Em atividades a execução das OAE - I-09. OAE - I 06 E e I 06 D."
   },
   {
+    contrato: 30,
     Região: "Nordeste",
     UF: "MA",
     BR: 10,
@@ -429,6 +460,7 @@ db.obras.insertMany([
     "Situação Obra": "Em execução serviços de terraplenagem e drenagem nas  marginais."
   },
   {
+    contrato: 31,
     Região: "Nordeste",
     UF: "MA",
     BR: 135,
@@ -442,6 +474,7 @@ db.obras.insertMany([
     "Situação Obra": "Em execução serviços de terraplenagem e pavimentação."
   },
   {
+    contrato: 32,
     Região: "Nordeste",
     UF: "MA",
     BR: 135,
@@ -456,6 +489,7 @@ db.obras.insertMany([
       "Contrato concluido por decurso de prazo devido à solicitações de RPFO do TCU. Em levantamento de remanescentes."
   },
   {
+    contrato: 33,
     Região: "Nordeste",
     UF: "MA",
     BR: 226,
@@ -470,6 +504,7 @@ db.obras.insertMany([
       "Executados 23km de revestimento na BR-226 e 6km no Contorno. Em execução serviços revestimento e drenagem superficial."
   },
   {
+    contrato: 34,
     Região: "Centro Oeste",
     UF: "MT",
     BR: 163,
@@ -484,6 +519,7 @@ db.obras.insertMany([
       "Executados 55.70 km de duplicação e 41.1 km de restauração. Em execução drenagem, duplicação, OAE e OAC. Foi entregue o contorno de São Pedro da Cipa"
   },
   {
+    contrato: 35,
     Região: "Centro Oeste",
     UF: "MT",
     BR: 163,
@@ -498,6 +534,7 @@ db.obras.insertMany([
       "A desapropriação do contorno de Jaciara encontra-se liberado. Aguardando a aprovação do RPFO para a retomada dos serviços."
   },
   {
+    contrato: 36,
     Região: "Centro Oeste",
     UF: "MT",
     BR: 163,
@@ -512,6 +549,7 @@ db.obras.insertMany([
       "Existem 38 km duplicados e 45.34 km restaurados. Em execução drenagem, restauração, duplicação, obras complementares e sinalização.  Posto da PRF inaugurado."
   },
   {
+    contrato: 37,
     Região: "Centro Oeste",
     UF: "MT",
     BR: 242,
@@ -525,6 +563,7 @@ db.obras.insertMany([
     "Situação Obra": "Contrato reiniciado. RDCi em fase de projeto. Pendência de LI."
   },
   {
+    contrato: 38,
     Região: "Centro Oeste",
     UF: "MT",
     BR: 242,
@@ -537,6 +576,7 @@ db.obras.insertMany([
     "Situação Obra": "RDCi em fase de projeto. Pendência de LI."
   },
   {
+    contrato: 39,
     Região: "Centro Oeste",
     UF: "MT",
     BR: 242,
@@ -550,6 +590,7 @@ db.obras.insertMany([
       "RDCi em fase de projeto. Assinado o contrato com a supervisora. Pendência de LI."
   },
   {
+    contrato: 40,
     Região: "Centro Oeste",
     UF: "MT",
     BR: 242,
@@ -563,6 +604,7 @@ db.obras.insertMany([
       "Obra concluída no dia 03/07/2020 Tem 8 pontes entregues para o tráfego."
   },
   {
+    contrato: 41,
     Região: "Centro Oeste",
     UF: "MT",
     BR: 174,
@@ -576,6 +618,7 @@ db.obras.insertMany([
       "Os lotes 01. 02 e 03 entregaram os projetos para análise da SR. Lote 04 a licitar. Licença Ambiental pendente. Os Lotes 5 e 6 serão suprimidos do termo."
   },
   {
+    contrato: 42,
     Região: "Centro Oeste",
     UF: "MT",
     BR: 70,
@@ -590,6 +633,7 @@ db.obras.insertMany([
       "Obra paralisada com 3.78 km de revestimento concluídos. Aguardando execução da drenagem para retomada da obra, prevista para 2021 e o término das obras."
   },
   {
+    contrato: 43,
     Região: "Centro Oeste",
     UF: "MS",
     BR: "060/163/262",
@@ -604,6 +648,7 @@ db.obras.insertMany([
       "Obras praticamente finalizadas, pendente apenas sinalização e obras na intersecção com a BR-163/MS."
   },
   {
+    contrato: 44,
     Região: "Centro Oeste",
     UF: "MS",
     BR: 419,
@@ -617,6 +662,7 @@ db.obras.insertMany([
     "Situação Obra": "RDCi em fase final de projeto. Executados 29.20 km de pavimentação."
   },
   {
+    contrato: 45,
     Região: "Centro Oeste",
     UF: "MS",
     BR: 419,
@@ -630,6 +676,7 @@ db.obras.insertMany([
     "Situação Obra": "RDCi em fase de projeto. Pendências com a licitação da supervisora."
   },
   {
+    contrato: 46,
     Região: "Sudeste",
     UF: "MG",
     BR: 365,
@@ -644,6 +691,7 @@ db.obras.insertMany([
       "Executando serviços na Trincheira do Taiaman e no Viaduto Francisco de Paulo Santos"
   },
   {
+    contrato: 47,
     Região: "Sudeste",
     UF: "MG",
     BR: 381,
@@ -658,6 +706,7 @@ db.obras.insertMany([
       "Executando serviços de terraplenagem, drenagem, pavimentação, sinalização e OAE. Concluídos 23 km de pavimentação"
   },
   {
+    contrato: 48,
     Região: "Sudeste",
     UF: "MG",
     BR: 381,
@@ -672,6 +721,7 @@ db.obras.insertMany([
       "Executando serviços de terraplenagem, drenagem, pavimentação, sinalização e OAE. Concluídos 35 km de pavimentação"
   },
   {
+    contrato: 49,
     Região: "Sudeste",
     UF: "MG",
     BR: 367,
@@ -685,6 +735,7 @@ db.obras.insertMany([
     "Situação Obra": "Serviços em fase inicial de mobilização"
   },
   {
+    contrato: 50,
     Região: "Sudeste",
     UF: "MG",
     BR: 262,
@@ -698,6 +749,7 @@ db.obras.insertMany([
       "Em execução PI na BR-050 e Passarela próxima à Coopervale. Remanescente restante a ser contratado pela Prefeitura de Uberaba"
   },
   {
+    contrato: 51,
     Região: "Sudeste",
     UF: "MG",
     BR: 440,
@@ -711,6 +763,7 @@ db.obras.insertMany([
     "Situação Obra": "Obras paralisadas"
   },
   {
+    contrato: 52,
     Região: "Sudeste",
     UF: "MG",
     BR: 154,
@@ -724,6 +777,7 @@ db.obras.insertMany([
     "Situação Obra": "Pavimentação concluída."
   },
   {
+    contrato: 53,
     Região: "Norte",
     UF: "PA",
     BR: 230,
@@ -738,6 +792,7 @@ db.obras.insertMany([
       "Obra paralisada, restam 2km para serem executados. Previsão de rescindir o contrato e contratar remanescentes."
   },
   {
+    contrato: 54,
     Região: "Norte",
     UF: "PA",
     BR: 230,
@@ -752,6 +807,7 @@ db.obras.insertMany([
       "Obra não iniciada, em andamento o levantamento de serviços para nova contratação."
   },
   {
+    contrato: 55,
     Região: "Norte",
     UF: "PA",
     BR: 230,
@@ -766,6 +822,7 @@ db.obras.insertMany([
       "Em execução de serviços nas OAEs sobre o Igarapé Jurupari, Kiri-kiri, sobre o Rio Curuatinga e Peruda."
   },
   {
+    contrato: 56,
     Região: "Norte",
     UF: "PA",
     BR: 230,
@@ -780,6 +837,7 @@ db.obras.insertMany([
       "Serviços de pavimentação conluídos em setembro de 2020 Estão em execução os serviços de drenagem superficial."
   },
   {
+    contrato: 57,
     Região: "Norte",
     UF: "PA",
     BR: 230,
@@ -794,6 +852,7 @@ db.obras.insertMany([
       "O contrato encontra-se paralisado. Em definição sobre retomada das obras por parte da Contratada."
   },
   {
+    contrato: 58,
     Região: "Norte",
     UF: "PA",
     BR: 230,
@@ -808,6 +867,7 @@ db.obras.insertMany([
       "O contrato foi paralisado em março/2016 Projeto das obras remanescentes em análise."
   },
   {
+    contrato: 59,
     Região: "Norte",
     UF: "PA",
     BR: 230,
@@ -821,6 +881,7 @@ db.obras.insertMany([
     "Situação Obra": "O contrato foi paralisado em março/2016"
   },
   {
+    contrato: 60,
     Região: "Norte",
     UF: "PA",
     BR: 230,
@@ -835,6 +896,7 @@ db.obras.insertMany([
       "Em execução dos serviços de encabeçamento na Ponte sobre o Igarapé Aparecida (Km 358.8)."
   },
   {
+    contrato: 61,
     Região: "Norte",
     UF: "PA",
     BR: 230,
@@ -847,6 +909,7 @@ db.obras.insertMany([
     "Situação Obra": "Em execução de serviços na OAE sobre o rio Seiko."
   },
   {
+    contrato: 62,
     Região: "Norte",
     UF: "PA",
     BR: 230,
@@ -861,6 +924,7 @@ db.obras.insertMany([
       "Foi concluida toda a pavimentação do contrato e este deve ser integralmente encerrrado em 2020"
   },
   {
+    contrato: 63,
     Região: "Norte",
     UF: "PA",
     BR: 230,
@@ -875,6 +939,7 @@ db.obras.insertMany([
       "Serão executados somente os projetos em 2020 Estudos Hidrológicos aprovados para oas OAEs sobre os igarapés Jaú, Jaú II, Valentim e Nova Descoberta. PB/PE da OAE sobre o igarapé Jaú I aprovado."
   },
   {
+    contrato: 64,
     Região: "Norte",
     UF: "PA",
     BR: 163,
@@ -889,6 +954,7 @@ db.obras.insertMany([
       "Estão em execução os serviços de drenagem, sinalização e revestimento."
   },
   {
+    contrato: 65,
     Região: "Norte",
     UF: "PA",
     BR: 163,
@@ -903,6 +969,7 @@ db.obras.insertMany([
       "A obra encontra-se em andamento com 90 km de terraplenagem e 70.47 km de pavimentação concluídos."
   },
   {
+    contrato: 66,
     Região: "Norte",
     UF: "PA",
     BR: 163,
@@ -916,6 +983,7 @@ db.obras.insertMany([
       "OAEs concluídas (2): Pontes sobre os igarapés Itapacurazinho, e Samurai. OAEs em execução (4): Pontes sobre os igarapés Açuí, Araguari, Preto, e Bueiro."
   },
   {
+    contrato: 67,
     Região: "Norte",
     UF: "PA",
     BR: 308,
@@ -930,6 +998,7 @@ db.obras.insertMany([
       "Foram iniciados os serviços de sub-base e base na vila do Patal. A mobilização para retomada integral das obras continua."
   },
   {
+    contrato: 68,
     Região: "Norte",
     UF: "PA",
     BR: 308,
@@ -944,6 +1013,7 @@ db.obras.insertMany([
       "Foram reiniciadas as atividades de drenagem e pavimentação na Vila do Curupaiti. A empresa continua mobilizando equipamento e pessoal."
   },
   {
+    contrato: 69,
     Região: "Norte",
     UF: "PA",
     BR: 316,
@@ -958,6 +1028,7 @@ db.obras.insertMany([
       "Os serviços foram retomados com a execução de limpeza, drenagem e terraplenagem."
   },
   {
+    contrato: 70,
     Região: "Nordeste",
     UF: "PB",
     BR: 426,
@@ -971,6 +1042,7 @@ db.obras.insertMany([
     "Situação Obra": "Obras concluídas."
   },
   {
+    contrato: 71,
     Região: "Nordeste",
     UF: "PB",
     BR: 230,
@@ -984,6 +1056,7 @@ db.obras.insertMany([
     "Situação Obra": "Contrato finalizado por decurso de prazo"
   },
   {
+    contrato: 72,
     Região: "Nordeste",
     UF: "PB",
     BR: 230,
@@ -997,6 +1070,7 @@ db.obras.insertMany([
     "Situação Obra": "Em execução serviços de OAE e vias marginais"
   },
   {
+    contrato: 73,
     Região: "Nordeste",
     UF: "PB",
     BR: 230,
@@ -1010,6 +1084,7 @@ db.obras.insertMany([
     "Situação Obra": "RDCi em fase de projetos. Restrição Orçamentária."
   },
   {
+    contrato: 74,
     Região: "Sul",
     UF: "PR",
     BR: 163,
@@ -1024,6 +1099,7 @@ db.obras.insertMany([
       "Agilizar os processos de desapropriação para não impactar no desenvolvimento linear da obra."
   },
   {
+    contrato: 75,
     Região: "Sul",
     UF: "PR",
     BR: 163,
@@ -1038,6 +1114,7 @@ db.obras.insertMany([
       "Contrato reiniciado em 12/02/2020. estando na fase de elaboração, análise e aceitação de projetos."
   },
   {
+    contrato: 76,
     Região: "Sul",
     UF: "PR",
     BR: 163,
@@ -1052,6 +1129,7 @@ db.obras.insertMany([
       "Pavimentados 33 km nao contínuos. Necessidade de Remoçao dos Postes da concessionária de energia."
   },
   {
+    contrato: 77,
     Região: "Sul",
     UF: "PR",
     BR: 487,
@@ -1066,6 +1144,7 @@ db.obras.insertMany([
       "Atividades de  Manutenção do Canteiro de Obras, superestrutura das (interseção I-08 km 33+750) e (interseção I-09 Km 41+740), terraplenagem e drenagem."
   },
   {
+    contrato: 78,
     Região: "Nordeste",
     UF: "PE",
     BR: 104,
@@ -1078,6 +1157,7 @@ db.obras.insertMany([
     "Situação Obra": "Obras paralisadas"
   },
   {
+    contrato: 79,
     Região: "Nordeste",
     UF: "PE",
     BR: 101,
@@ -1091,6 +1171,7 @@ db.obras.insertMany([
       "Executando serviços de pavimentação na Marginal da Av. Caxangá até a UFPE"
   },
   {
+    contrato: 80,
     Região: "Nordeste",
     UF: "PI",
     BR: 235,
@@ -1105,6 +1186,7 @@ db.obras.insertMany([
       "Obra em andamento, previsão de entrega 47.70 km em 2020 Caracol (Km 20.0) / Guaribas (Km 67.7)."
   },
   {
+    contrato: 81,
     Região: "Nordeste",
     UF: "PI",
     BR: 235,
@@ -1119,6 +1201,7 @@ db.obras.insertMany([
       "OAE encontra-se com 100% da Infraestrutura concluída/ 93% da Mesoestrutura/ 98% da Superestrutura/ 44% do acabamento e 24% dos encabeçamentos executados. Previsão de concluir a ponte até 12/2020"
   },
   {
+    contrato: 82,
     Região: "Nordeste",
     UF: "PI",
     BR: 343,
@@ -1133,6 +1216,7 @@ db.obras.insertMany([
       "Obra em andamento com previsão de entregar Viaduto do Mercado do Peixe (Interseção da BR-343/PI com a Av. dos Expedicionários) em 12/2020"
   },
   {
+    contrato: 83,
     Região: "Nordeste",
     UF: "PI",
     BR: 316,
@@ -1146,6 +1230,7 @@ db.obras.insertMany([
       "Contrato assinado em 26/12/2019 encontra-se em elaboração dos Projetos."
   },
   {
+    contrato: 84,
     Região: "Sudeste",
     UF: "RJ",
     BR: 193,
@@ -1160,6 +1245,7 @@ db.obras.insertMany([
       "Obras paralisadas. Restrição orçamentária e interferências no trecho. Estudos para retomada e/ou concessão."
   },
   {
+    contrato: 85,
     Região: "Nordeste",
     UF: "RN",
     BR: 101,
@@ -1174,6 +1260,7 @@ db.obras.insertMany([
       "Obras concluídas em todos os Viadutos. Em execução de serviços de plantio de grama e construção de muro."
   },
   {
+    contrato: 86,
     Região: "Nordeste",
     UF: "RN",
     BR: 406,
@@ -1188,6 +1275,7 @@ db.obras.insertMany([
       "Estão em execução serviços de aplicação de binder, infraestrutura do Túnel e meso e superestrutura do viaduto."
   },
   {
+    contrato: 87,
     Região: "Nordeste",
     UF: "RN",
     BR: 304,
@@ -1202,6 +1290,7 @@ db.obras.insertMany([
       "Em execução de serviços de drenagem, OAC, sinalização, terraplenagem e revestimento."
   },
   {
+    contrato: 88,
     Região: "Sul",
     UF: "RS",
     BR: 116,
@@ -1216,6 +1305,7 @@ db.obras.insertMany([
       "Em 10/12/2020 foi realizado a inalguracao da nova ponte sobre o rio Guaíba  na linha Geral (eixo Norte Sul)."
   },
   {
+    contrato: 89,
     Região: "Sul",
     UF: "RS",
     BR: 392,
@@ -1230,6 +1320,7 @@ db.obras.insertMany([
       "Concluido - 98% de terraplenagem, 79% de pavimentação, 87% das Obras de Artes Especiais."
   },
   {
+    contrato: 90,
     Região: "Sul",
     UF: "RS",
     BR: 158,
@@ -1244,6 +1335,7 @@ db.obras.insertMany([
       "Executados serviços nos Viadutos Ramos 61-Uglione, restauração do Viaduto com BR-287/Rodoviária, Viadutos 1 e 2 de Ramo 66 e Trincheira do Ramo 59"
   },
   {
+    contrato: 91,
     Região: "Sul",
     UF: "RS",
     BR: 287,
@@ -1258,6 +1350,7 @@ db.obras.insertMany([
       "Executados Passagem Inferior R. Cap. Vasco da Cunha e Ponte sobre Arroio Cadena LD e serviços pavimentação nos segmentos 2 e 3"
   },
   {
+    contrato: 92,
     Região: "Sul",
     UF: "RS",
     BR: 290,
@@ -1272,6 +1365,7 @@ db.obras.insertMany([
       "Não há atividades de execução da obra. O consórcio encontra-se desmobilizado."
   },
   {
+    contrato: 93,
     Região: "Sul",
     UF: "RS",
     BR: 290,
@@ -1286,6 +1380,7 @@ db.obras.insertMany([
       "Não houve execução de serviços, empenho  esgotado, sem previsão de novos aportes orçamentários. Paralisado 31/07/2017"
   },
   {
+    contrato: 94,
     Região: "Sul",
     UF: "RS",
     BR: 290,
@@ -1300,6 +1395,7 @@ db.obras.insertMany([
       "Ao final do mês de agosto de 2018 foi dada ordem de paralisação ao Consórcio Construtor."
   },
   {
+    contrato: 95,
     Região: "Sul",
     UF: "RS",
     BR: 290,
@@ -1314,6 +1410,7 @@ db.obras.insertMany([
       "Necessidade de aportes financeiro para continuidade das obras. Projeto complementar de travessia de fauna em analise."
   },
   {
+    contrato: 96,
     Região: "Sul",
     UF: "RS",
     BR: 116,
@@ -1328,6 +1425,7 @@ db.obras.insertMany([
       "Previsto liberar novo segmento de pista dupla 10 km, compreendido entre o km 320+500 e km 330+500. ainda em 2020. totalizando 15 km."
   },
   {
+    contrato: 97,
     Região: "Sul",
     UF: "RS",
     BR: 116,
@@ -1342,6 +1440,7 @@ db.obras.insertMany([
       "Contrato Paralisado a partir de 21/09/2020. aguardando a conclusão dos procedimentos administrativos de RPFO"
   },
   {
+    contrato: 98,
     Região: "Sul",
     UF: "RS",
     BR: 116,
@@ -1355,6 +1454,7 @@ db.obras.insertMany([
     "Situação Obra": "Contrato encerrado"
   },
   {
+    contrato: 99,
     Região: "Sul",
     UF: "RS",
     BR: 116,
@@ -1369,6 +1469,7 @@ db.obras.insertMany([
       "Ordem de Inicio em 15/09/2020. dos servicos remanescentes dos lotes 3 e 4 Finalidade de liberação de mais 4km duplicados ate Dez/2020"
   },
   {
+    contrato: 100,
     Região: "Sul",
     UF: "RS",
     BR: 116,
@@ -1382,6 +1483,7 @@ db.obras.insertMany([
     "Situação Obra": "Contrato Encerrado"
   },
   {
+    contrato: 101,
     Região: "Sul",
     UF: "RS",
     BR: 116,
@@ -1396,6 +1498,7 @@ db.obras.insertMany([
       "Obra encontra-se em rítimo normal, e o cronograma está sendo atendido."
   },
   {
+    contrato: 102,
     Região: "Sul",
     UF: "RS",
     BR: 116,
@@ -1410,6 +1513,7 @@ db.obras.insertMany([
       "- Desmatamento - 21.6 km/ Terraplenagem - 20.8 km/ Sub-base - 20.8 km/ Base - 20.4 km/ Revestimento - 18.8 km/ Drenagem OAC - 15.9 km"
   },
   {
+    contrato: 103,
     Região: "Sul",
     UF: "RS",
     BR: 116,
@@ -1424,6 +1528,7 @@ db.obras.insertMany([
       "- Desmatamento - 18.9 km/ Terraplenagem - 15.8 km/ Sub-base - 15.8 km/ Base - 15.3 km/ Revestimento - 11.0 km/ Obras de contenção - 0.6 km"
   },
   {
+    contrato: 104,
     Região: "Sul",
     UF: "RS",
     BR: 116,
@@ -1438,6 +1543,7 @@ db.obras.insertMany([
       "Vigência contratual encerra em 030421 Terraplenagem - 21.0 km/ Revestimento - 20.7 km/"
   },
   {
+    contrato: 105,
     Região: "Sul",
     UF: "RS",
     BR: 116,
@@ -1452,6 +1558,7 @@ db.obras.insertMany([
       "Ordem de Início: 22/4/2020 Previsão iniciar a ponte do Rio dos Sinos após a conclusão dos Projetos."
   },
   {
+    contrato: 106,
     Região: "Norte",
     UF: "RO",
     BR: 364,
@@ -1466,6 +1573,7 @@ db.obras.insertMany([
       "Produtividade prejudicada devido à restrição de insumos gerados pela pandemia. Em andamento execução do elevado, terraplenagem e OAC."
   },
   {
+    contrato: 107,
     Região: "Norte",
     UF: "RO",
     BR: 429,
@@ -1480,6 +1588,7 @@ db.obras.insertMany([
       "Pavimentação de encabeçamento das pontes praticamente concluídos. Paralisado em out/18.PAAR em andamento."
   },
   {
+    contrato: 108,
     Região: "Norte",
     UF: "RO",
     BR: 364,
@@ -1493,6 +1602,7 @@ db.obras.insertMany([
     "Situação Obra": "Obras concluidas, em fase de recebimento."
   },
   {
+    contrato: 109,
     Região: "Norte",
     UF: "RR",
     BR: 432,
@@ -1507,6 +1617,7 @@ db.obras.insertMany([
       "Obra em andamento, atualmente com 19.85 km de terraplenagem e 13.94 Km de revestimento concluídos."
   },
   {
+    contrato: 110,
     Região: "Norte",
     UF: "RR",
     BR: 432,
@@ -1520,6 +1631,7 @@ db.obras.insertMany([
     "Situação Obra": "Execução física concluída em dezembro/2018. aguardando finalização."
   },
   {
+    contrato: 111,
     Região: "Norte",
     UF: "RR",
     BR: 432,
@@ -1533,6 +1645,7 @@ db.obras.insertMany([
     "Situação Obra": "Execução física concluída em abril/2020. aguardando finalização."
   },
   {
+    contrato: 112,
     Região: "Norte",
     UF: "RR",
     BR: 432,
@@ -1547,6 +1660,7 @@ db.obras.insertMany([
       "Obra iniciada em 18/01/2018. 5.86 km de terraplenagem concluídos e 4.62 km de pavimentação concluídos."
   },
   {
+    contrato: 113,
     Região: "Sul",
     UF: "SC",
     BR: 280,
@@ -1561,6 +1675,7 @@ db.obras.insertMany([
       "Serviços concentrados no Contorno de São Francisco do Sul e nas marginais próximas ao viaduto do IFC. Liberada a execução de serviços nas terras indígenas."
   },
   {
+    contrato: 114,
     Região: "Sul",
     UF: "SC",
     BR: 280,
@@ -1575,6 +1690,7 @@ db.obras.insertMany([
       "Executando serviços de terraplenagem, pavimentação e OAE. Liberada a execução de serviços nas terras indígenas."
   },
   {
+    contrato: 115,
     Região: "Sul",
     UF: "SC",
     BR: 280,
@@ -1589,6 +1705,7 @@ db.obras.insertMany([
       "Executando serviços de terraplenagem, pavimentação, OAE e revestimento nas paredes dos túneis."
   },
   {
+    contrato: 116,
     Região: "Sul",
     UF: "SC",
     BR: 163,
@@ -1602,6 +1719,7 @@ db.obras.insertMany([
     "Situação Obra": "Obras não iniciadas. Projeto executivo em análise pelo DNIT."
   },
   {
+    contrato: 117,
     Região: "Sul",
     UF: "SC",
     BR: 470,
@@ -1616,6 +1734,7 @@ db.obras.insertMany([
       "Fase final da sinalização no acesso à cidade de Navegantes. Demais serviços concentrados entre os km 10 e km 16"
   },
   {
+    contrato: 118,
     Região: "Sul",
     UF: "SC",
     BR: 470,
@@ -1630,6 +1749,7 @@ db.obras.insertMany([
       "Execução de terraplenagem, pavimentação e OAE. 19 km de duplicação liberados e 4 OAEs concluídas."
   },
   {
+    contrato: 119,
     Região: "Sul",
     UF: "SC",
     BR: 470,
@@ -1644,6 +1764,7 @@ db.obras.insertMany([
       "Serviços concentrados no trevo de acesso à Pomerode. O Complexo da Mafisa foi entregue em agosto de 2020 Aguardando desapropriação de demais trechos."
   },
   {
+    contrato: 120,
     Região: "Sul",
     UF: "SC",
     BR: 470,
@@ -1658,6 +1779,7 @@ db.obras.insertMany([
       "Executando serviços de restauração, pavimentação e OAE. Poucas frentes de serviço disponíveis por problemas com desapropriação."
   },
   {
+    contrato: 121,
     Região: "Sul",
     UF: "SC",
     BR: 285,
@@ -1672,6 +1794,7 @@ db.obras.insertMany([
       "Contorno de Timbé do Sul Concluído. Executando serviços de terraplenagem, pavimentação, drenagem e OAE no trecho da Serra da Rocinha."
   },
   {
+    contrato: 122,
     Região: "Sul",
     UF: "SC",
     BR: 282,
@@ -1685,6 +1808,7 @@ db.obras.insertMany([
       "Pavimentação concluída. Aguardando licitação para segunda etapa da obra."
   },
   {
+    contrato: 123,
     Região: "Sul",
     UF: "SC",
     BR: "158/282",
@@ -1698,6 +1822,7 @@ db.obras.insertMany([
       "Restauração ainda não foi iniciada. Projetos básico e executivo em análise pela SR/SC."
   },
   {
+    contrato: 124,
     Região: "Sul",
     UF: "SC",
     BR: 101,
@@ -1711,6 +1836,7 @@ db.obras.insertMany([
     "Situação Obra": "Contrato concluído"
   },
   {
+    contrato: 125,
     Região: "Sudeste",
     UF: "SP",
     BR: 101,
@@ -1725,6 +1851,7 @@ db.obras.insertMany([
       "Contrato em fase de projetos. Não há disponibilidade orçamentária para início das obras"
   },
   {
+    contrato: 126,
     Região: "Sudeste",
     UF: "SP",
     BR: 153,
@@ -1739,6 +1866,7 @@ db.obras.insertMany([
       "Executando serviços de terraplenagem, drenagem, pavimentação, sinalização e OAE. Concluídos 16 km de pavimentação"
   },
   {
+    contrato: 127,
     Região: "Sudeste",
     UF: "SP",
     BR: 381,
@@ -1752,6 +1880,7 @@ db.obras.insertMany([
     "Situação Obra": "Serviços paralisados pelo DERSA/SP"
   },
   {
+    contrato: 128,
     Região: "Nordeste",
     UF: "SE",
     BR: 101,
@@ -1766,6 +1895,7 @@ db.obras.insertMany([
       "25 km duplicados liberados ao tráfego. Em execução drenagem, pavimentação, sinalização e obras complementares."
   },
   {
+    contrato: 129,
     Região: "Nordeste",
     UF: "SE",
     BR: 101,
@@ -1780,6 +1910,7 @@ db.obras.insertMany([
       "2 Pontes e 2 Viadutos em fase final. Em execução obras para construção do Viaduto de acesso a Propriá"
   },
   {
+    contrato: 130,
     Região: "Nordeste",
     UF: "SE",
     BR: 101,
@@ -1795,6 +1926,7 @@ db.obras.insertMany([
       "Concluídas 7 OAEs, não iniciadas cinco. PI de acesso a Siriri concluída, pendente laje de transição. Contrato não prorrogado."
   },
   {
+    contrato: 131,
     Região: "Nordeste",
     UF: "SE",
     BR: 101,
@@ -1808,6 +1940,7 @@ db.obras.insertMany([
     "Situação Obra": "Obras paralisadas, devido às diversas interferências."
   },
   {
+    contrato: 132,
     Região: "Nordeste",
     UF: "SE",
     BR: 101,
@@ -1822,6 +1955,7 @@ db.obras.insertMany([
       "Liberados 5km duplicados. Obras em ritmo lento, executando terraplenagem e obras complementares."
   },
   {
+    contrato: 133,
     Região: "Nordeste",
     UF: "SE",
     BR: 101,
@@ -1835,6 +1969,7 @@ db.obras.insertMany([
     "Situação Obra": "Obras de contenção do lado de Sergipe em fase final."
   },
   {
+    contrato: 134,
     Região: "Norte",
     UF: "TO",
     BR: 153,
@@ -1849,6 +1984,7 @@ db.obras.insertMany([
       "RDCi em fase de projeto e obras com bom ritmo. Em execução infra e mesoestruturas do lado de Tocantins, com 11.8% executados."
   },
   {
+    contrato: 135,
     Região: "Norte",
     UF: "TO",
     BR: 242,

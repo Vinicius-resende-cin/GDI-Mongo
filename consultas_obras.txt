@@ -1,5 +1,7 @@
 use Main
 
+db.BR_total.drop()
+
 db.obras.find({'Valor Vigente(R$)':{$gte:500000000}})
 
 db.obras.find({'Data Término': {$lt: new Date()}}).count()
@@ -52,11 +54,12 @@ db.obras.find({}).pretty()
 
 db.obras.findOne({UF: 'SP'})
 
-db.obras.find({}, {_id: 0, UF: 1, BR: 1, Empresa: 1, 'Valor Vigente': 1}).sort('Valor Vigente(R$)').limit(10)
+db.obras.find({}, {_id: 0, UF: 1, BR: 1, Empresa: 1, 'Valor Vigente(R$)': 1}).sort('Valor Vigente(R$)').limit(10)
 
 db.obras.updateOne({'Extensão(km)': 1}, {$set:{'Extensão(km)': 1.2}})
 
 db.obras.save({
+    Contrato: 140,
     Região: "Nordeste",
     UF: "PE",
     BR: "232",
@@ -71,11 +74,11 @@ db.obras.save({
 
 db.obras.aggregate([
    {$addFields:
-        {message:
+        {'Valor/km':
             {$function:
                 {
-                    body: "this.Extensão / this.Valor Vigente(R$)",
-                    args: [],
+                    body: "function(ext, valor) {return valor / ext}",
+                    args: ["$Extensão(km)", "$Valor Vigente(R$)"],
                     lang: "js"
                 }
             }
@@ -99,3 +102,12 @@ db.obras.aggregate([
         }
     }
 ]).sort({"Extensão": 1})
+
+db.obras.mapReduce(
+    "function() {emit(this.BR, this['Valor Vigente(R$)'])}",
+    "function(key, values) {return Array.sum(values)}",
+    {
+        query: {},
+        out: "BR_total"
+    }
+)
