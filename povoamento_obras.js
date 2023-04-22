@@ -1,6 +1,6 @@
-use Main
+db = db.getSiblingDB("Main");
 
-db.obras.drop()
+db.obras.drop();
 
 db.obras.insertMany([
   {
