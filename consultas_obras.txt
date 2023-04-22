@@ -1,11 +1,16 @@
+// altera o banco de dados
 use Main
 
+// apaga uma coleção gerada posteriormente
 db.BR_total.drop()
 
+// retorna as obras com valor >= 500 000 000
 db.obras.find({'Valor Vigente(R$)':{$gte:500000000}})
 
+// retorna as obras com previsão de término anterior à data atual
 db.obras.find({'Data Término': {$lt: new Date()}}).count()
 
+// retorna as obras no estado de PE
 db.obras.aggregate([
     {$match: {UF: 'PE'}},
     {$project: {
@@ -17,6 +22,7 @@ db.obras.aggregate([
     }}
 ])
 
+// valor total das obras no nordeste
 db.obras.aggregate([
     { $match: {'Região':'Nordeste'}},
     {$group: {
@@ -25,6 +31,7 @@ db.obras.aggregate([
     }}
 ])
 
+// media das obras na BR 101
 db.obras.aggregate([
     { $match: {BR: 101}},
     {$group: {
@@ -33,6 +40,7 @@ db.obras.aggregate([
     }}
 ])
 
+// valor maximo de todas as obras
 db.obras.aggregate([
     {$group: {
         _id: null,
@@ -40,24 +48,34 @@ db.obras.aggregate([
     }}
 ])
 
+// cria um índice para permitir busca de texto
 db.obras.createIndex( { Empresa: "text" } )
 
+// busca o texto 'CONSÓRCIO BR-101'
 db.obras.find({$text: {$search: 'CONSÓRCIO BR-101'}})
 
+// retorna a UF, a Empresa q a Supervisora das obras que possuem supervisora
 db.obras.find({Supervisora: {$exists: true}}, {_id: 0, UF: 1, Empresa: 1, Supervisora: 1})
 
+// retorna as obras nas BR's ímpares
 db.obras.find({$where: "this.BR % 2 == 1"})
 
+// busca as obras feitas pela CONSÓRCIO SANCHES e as ordena pelo Valor Vigente
 db.obras.find({Empresa:{$regex:'CONSÓRCIO SANCHES'}}).sort('Valor Vigente(R$)')
 
+// mostra todas as obras de forma mais bonita
 db.obras.find({}).pretty()
 
+// retorna um obra feita em São Paulo
 db.obras.findOne({UF: 'SP'})
 
+// mostra a UF, BR, Empresa, Valor Vigente de 10 obras e as ordena pelo Valor Vigente 
 db.obras.find({}, {_id: 0, UF: 1, BR: 1, Empresa: 1, 'Valor Vigente(R$)': 1}).sort('Valor Vigente(R$)').limit(10)
 
+// atualiza o valor da extensão de uma obra de 1 para 1.2 km
 db.obras.updateOne({'Extensão(km)': 1}, {$set:{'Extensão(km)': 1.2}})
 
+// [DEPRECATED] adiciona uma nova obra
 db.obras.save({
     Contrato: 140,
     Região: "Nordeste",
@@ -72,6 +90,7 @@ db.obras.save({
     "Situação Obra": "Serviços em execução. Previsão de conclusão até junho de 2020"
 })
 
+// adiciona um campo de valor por kilometro e retorna todas as obras
 db.obras.aggregate([
    {$addFields:
         {'Valor/km':
@@ -86,6 +105,7 @@ db.obras.aggregate([
     }
 ])
 
+// retorna todas as obras na BR 101 e diz se elas foram feias em Pernambuco ou não
 db.obras.aggregate([
     {$match: {BR:101}},
     {$project:{
@@ -103,6 +123,7 @@ db.obras.aggregate([
     }
 ]).sort({"Extensão": 1})
 
+// soma o valor total para cada BR e cria uma nova coleção em que os documentos contêm o número da BR e o valor total das obras nela
 db.obras.mapReduce(
     "function() {emit(this.BR, this['Valor Vigente(R$)'])}",
     "function(key, values) {return Array.sum(values)}",

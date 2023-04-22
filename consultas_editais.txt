@@ -1,14 +1,19 @@
+// altera o banco de dados
 Use Main
 
+// mostra todos os editais que têm 2 empresas
 db.editais.find({Empresas: {$size: 2}})
 
+// atualiza o valor do edital da Obra 57 e adiciona a empresa CONSÓRCIO CONTORNO à array de empresas
 db.editais.updateOne(
     {Obra: 57},
     {$addToSet: {Empresas: 'CONSÓRCIO CONTORNO'}}
 )
 
+//mostra todas os editais que tem como empresas a ARTELES e o CONSÓRCIO CONTORNO
 db.editais.find({Empresas: {$all: ['ARTELESTE', 'CONSÓRCIO CONTORNO']}})
 
+// adiciona ao edital um novo campo contendo a obra a qual ele se refere
 db.editais.aggregate([
     {$lookup:{
         from: "obras",
@@ -19,6 +24,7 @@ db.editais.aggregate([
     {$limit: 10}
 ])
 
+// mostra todas as empresas de cada edital, exceto a empresa ARTELESTE
 db.editais.aggregate([
     {$project:{
         _id:0,
@@ -28,5 +34,6 @@ db.editais.aggregate([
                 as: "empresas",
                 cond: { $ne: [ "$$empresas", "ARTELESTE"] } } } } }])
 
+// renomeia a coleção editais pra licitacoes e renomeia de novo para editais
 db.editais.renameCollection("licitacoes")
 db.licitacoes.renameCollection("editais")
