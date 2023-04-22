@@ -54,7 +54,7 @@ db.obras.createIndex( { Empresa: "text" } )
 // busca o texto 'CONSÓRCIO BR-101'
 db.obras.find({$text: {$search: 'CONSÓRCIO BR-101'}})
 
-// retorna a UF, a Empresa q a Supervisora das obras que possuem supervisora
+// retorna a UF, a Empresa e a Supervisora das obras que possuem supervisora
 db.obras.find({Supervisora: {$exists: true}}, {_id: 0, UF: 1, Empresa: 1, Supervisora: 1})
 
 // retorna as obras nas BR's ímpares

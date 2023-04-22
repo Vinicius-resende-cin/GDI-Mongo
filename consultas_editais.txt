@@ -1,5 +1,5 @@
 // altera o banco de dados
-Use Main
+use Main
 
 // mostra todos os editais que têm 2 empresas
 db.editais.find({Empresas: {$size: 2}})
